@@ -4,11 +4,10 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pytest = "*"
-pytest-cov = "*"
 
 [packages]
-pset_utils = {editable = true,git = "https://github.com/csci-e-29/2019sp-pset-utils-mjcarleb"}
+tenacity="*"
+apache-airflow="*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.5"

@@ -1,4 +1,4 @@
-FROM python:3.7 AS base
+FROM python:3.5 AS base
 
 ARG CI_USER_TOKEN
 RUN echo "machine github.com\n  login $CI_USER_TOKEN\n" >~/.netrc
@@ -16,10 +16,12 @@ ENV \
     PYTHONPATH="/app/src:${PYTHONPATH}"
 
 WORKDIR /root
-COPY .netrc .
 
 RUN pip install pipenv
 
 WORKDIR /app
 COPY Pipfile .
+
+ARG SLUGIFY_USES_TEXT_UNIDECODE=yes
 RUN pipenv install --dev
+
