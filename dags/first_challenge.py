@@ -15,14 +15,14 @@ from datetime import datetime, timedelta
 
 # Define common default arguments for all operators in this example DAG
 default_args = {
-    'owner': 'airflow',
+    'owner': 'Mark',
     'depends_on_past': False,
     'start_date': datetime(2015, 6, 1),
-    'email': ['airflow@example.com'],
-    'email_on_failure': False,
-    'email_on_retry': False,
-    'retries': 1,
-    'retry_delay': timedelta(minutes=5),
+    #'email': ['airflow@example.com'],
+    #'email_on_failure': False,
+    #'email_on_retry': False,
+    #'retries': 1,
+    #'retry_delay': timedelta(minutes=5),
     # 'queue': 'bash_queue',
     # 'pool': 'backfill',
     # 'priority_weight': 10,
@@ -31,9 +31,9 @@ default_args = {
 
 
 # Create example DAG to demonstrate salting of file names
-dagFIRST = DAG('first',
+dagFIRST = DAG('first3',
                default_args=default_args,
-               schedule_interval=timedelta(days=1)
+               schedule_interval="5 * * * *"
                )
 
 
