@@ -18,9 +18,12 @@ yday = datetime.combine(datetime.today() - timedelta(1),
                                   datetime.min.time())
 
 
-def do_more(ds, **kwargs):
+def read_from_csv(ds, **kwargs):
 
     print("hello world")
+
+    df = pd.read_csv("~/yelp1.csv")
+    print(df.shape)
     return "Whatever you return gets printed in logs"
 
 
@@ -34,7 +37,7 @@ default_args = {
     'retry_delay': timedelta(minutes=5)
 }
 
-dag = DAG('do_more_in_python2',
+dag = DAG('read_csv_into_dataframe',
           default_args=default_args,
           schedule_interval='@once')
 
@@ -67,9 +70,9 @@ t4 = BashOperator(
 
 
 t5 = PythonOperator(
-    task_id = "first_python_operator",
+    task_id = "pandas_python_operator",
     provide_context=True,
-    python_callable=do_more,
+    python_callable=read_from_csv,
     dag=dag
 )
 
