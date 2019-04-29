@@ -1,7 +1,5 @@
-channels:
-- defaults
-- bokeh
-- conda-forge
+name: airflow4
+
 dependencies:
 - matplotlib
 - nbconvert
@@ -14,7 +12,6 @@ dependencies:
 - dask-ml
 - jupyter
 - jupyterlab
-- tenacity
 - botocore
 - boto3
 
