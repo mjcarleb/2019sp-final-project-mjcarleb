@@ -70,3 +70,10 @@ docs/_build
 # Stale old files
 *backup*
 *old*
+*tmp*
+
+# Airflow related
+logs/
+*.db
+*.pid
+*.cfg
