@@ -7,46 +7,51 @@
 #########################################
 
 from airflow import DAG
-from airflow.operators.bash_operator import BashOperator
-from airflow.contrib.sensors.file_sensor import FileSensor
+from airflow.operators.sensors import S3KeySensor
+from airflow.operators import BashOperator
 from datetime import datetime, timedelta
 
-# Define common default arguments for all operators in this example DAG
+yday = datetime.combine(datetime.today() - timedelta(1),
+                                  datetime.min.time())
+
 default_args = {
-    "owner": 'mjcarleb',
-    "retries": 1,
-    "retry_delay": timedelta(minutes=5),
-    "start_date": datetime(2019, 4, 28),
-    "end_date": datetime(2019,4,29),
-    "depends_on_past": False,
+    'owner': 'mjcarleb',
+    'depends_on_past': False,
+    'start_date': yday,
+    'email_on_failure': False,
+    'email_on_retry': False,
+    'retries': 1,
+    'retry_delay': timedelta(minutes=5)
 }
 
+dag = DAG('s3_justkey_sensor', default_args=default_args, schedule_interval='@once')
 
-# Create example DAG to demonstrate salting of file names
-dag = DAG('localfile6',
-          default_args=default_args,
-          schedule_interval="@once")
-
-
-# Add first task to DAG we of this example
-t1 = FileSensor(
-    filepath="tmp.tmp",
-    task_id= "depend_on_tmptmp",
-    fs_conn_id="fs_default2",
+t1 = S3KeySensor(
+    task_id='s3_file_test',
+    poke_interval=0,
+    timeout=10,
+    bucket_key='s3://cscie29-data/pset5/yelp_data/yelp_subset_*.csv',
+    bucket_name=None,
+    wildcard_match=True,
+    aws_conn_id = "aws_default",
     dag=dag)
 
-
-
-# Add first task to DAG we of this example
 t2 = BashOperator(
-    task_id= "echo3",
-    bash_command= "echo 3",
+    task_id='task2',
+    depends_on_past=False,
+    bash_command='echo a big hadoop job putting files on s3',
+    trigger_rule='all_failed',
     dag=dag)
 
+t3 = BashOperator(
+    task_id='task3',
+    depends_on_past=False,
+    bash_command='echo im next job using s3 files',
+    dag=dag)
 
 t2.set_upstream(t1)
-
-
+t3.set_upstream(t1)
+t3.set_upstream(t2)
 
 #########################################
 # Old Tutorial Code
