@@ -1,3 +1,4 @@
+from airflow import DAG
 from airflow.operators.sensors import S3KeySensor
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
@@ -9,9 +10,9 @@ yday = datetime.combine(datetime.today() - timedelta(1),
                                   datetime.min.time())
 
 
-def read_from_csv(ds, **kwargs):
+def print_my_name(my_name):
 
-    print("hello world")
+    print(f"hello, {my_name}")
 
     df = pd.read_csv("~/yelp1.csv")
     print(df.shape)
@@ -28,7 +29,7 @@ default_args = {
     'retry_delay': timedelta(minutes=5)
 }
 
-dag = DAG('read_csv_into_dataframe',
+dag = DAG('pass_arg_print_name2',
           default_args=default_args,
           schedule_interval='@once')
 
@@ -62,10 +63,10 @@ t4 = BashOperator(
 
 t5 = PythonOperator(
     task_id = "pandas_python_operator",
-    provide_context=True,
-    python_callable=read_from_csv,
-    dag=dag
-)
+    provide_context=False,
+    python_callable=print_my_name,
+    op_kwargs={"my_name": "MarkJoseph"},
+    dag=dag)
 
 t2.set_upstream(t1)
 t3.set_upstream(t2)
