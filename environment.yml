@@ -15,6 +15,7 @@ dependencies:
 - jupyter
 - jupyterlab
 - tenacity
+- botcore
 
 - pip:
   - apache-airflow
