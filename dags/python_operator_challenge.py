@@ -12,13 +12,14 @@ from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 from datetime import datetime, timedelta
 
-import pprint
+import pandas as pd
 
 yday = datetime.combine(datetime.today() - timedelta(1),
                                   datetime.min.time())
 
 
-def print_context(ds, **kwargs):
+def do_more(ds, **kwargs):
+
     print("hello world")
     return "Whatever you return gets printed in logs"
 
@@ -33,7 +34,7 @@ default_args = {
     'retry_delay': timedelta(minutes=5)
 }
 
-dag = DAG('play_with_python_op3',
+dag = DAG('do_more_in_python2',
           default_args=default_args,
           schedule_interval='@once')
 
@@ -68,7 +69,7 @@ t4 = BashOperator(
 t5 = PythonOperator(
     task_id = "first_python_operator",
     provide_context=True,
-    python_callable=print_context,
+    python_callable=do_more,
     dag=dag
 )
 
