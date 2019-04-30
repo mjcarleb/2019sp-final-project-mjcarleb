@@ -109,23 +109,20 @@ def check_copied_hashes_match(**context):
 
     import pandas as pd
 
-    # Set default values for these flags which will get pushed to XCOM
-    re_do_copy = re_do_report = False
-
     # Try to pull copied_hash_past from last run of Pass_or_Copy
     copied_hash_past = context["task_instance"].xcom_pull(task_ids="Pass_or_Copy",
                                                           key="copied_hash_past")
-    print(f"Here is copied_hash_past = {copied_hash_past}")
 
+    # If copied_hash_past does not exist, then re-do copy, transform and reports
     if copied_hash_past is None:
-        print("caught copied_hash_past being None (good)!!!!!!")
 
-        # Set flags to show we need to re-copy and re-run report
-        re_do_copy = re_do_report = True
+        # Push flags to XCOM so downstream systems can consume
+        context["ti"].xcom_push(key="Re_Do_Copy", value=True)
+        context["ti"].xcom_push(key="Re_Do_Hashes", value=True)
+        context["ti"].xcom_push(key="Re_Do_Report", value=True)
 
-        # Push Re_Do_Copy = Re_Do_Report = True
-
-        return str(f"re_do_copy={re_do_copy} & re_do_report={re_do_report}")
+        # Message to the log
+        return "copied_hash_past was None"
 
     else:
 
@@ -139,7 +136,8 @@ def check_copied_hashes_match(**context):
 
         # Else push Re_Do_Copy = Re_Do_Report = True
 
-    return str(f"re_do_copy={re_do_copy} & re_do_report={re_do_report}")
+        # Message to the log
+        return "copied_hash_past was not None"
 
 
 t5 = PythonOperator(
