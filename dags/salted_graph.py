@@ -4,6 +4,7 @@
 ############################################################
 ############################################################
 
+from airflow import DAG
 from airflow.operators.sensors import S3KeySensor
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
@@ -23,6 +24,24 @@ import pandas as pd
 ############################################################
 ############################################################
 
+# Fix this to make today
+this_day = datetime.combine(datetime.today() - timedelta(1),
+                             datetime.min.time())
+
+# Parameters passed automatically by DAG to operators
+# See BaseOperator source code for full set of possibilities
+default_args = {
+    'owner': 'mjcarleb',
+    'depends_on_past': False,
+    'start_date': this_day,
+    'email_on_failure': False,
+    'retries': 0
+}
+
+# Define DAG with minimum number of parameters
+dag = DAG('Salted_Graph_Practice1',
+          default_args=default_args,
+          schedule_interval='@once')
 
 ############################################################
 ############################################################
@@ -30,6 +49,14 @@ import pandas as pd
 ############################################################
 ############################################################
 
+t1 = S3KeySensor(
+    task_id='Sense_S3_Source_Data',
+    poke_interval=10,
+    timeout=30,
+    bucket_key='s3://cscie29-data/pset5/yelp_data/yeld_subset_1.csv',
+    bucket_name=None,
+    aws_conn_id = "aws_default",
+    dag=dag)
 
 ############################################################
 ############################################################
@@ -140,7 +167,7 @@ import pandas as pd
 ############################################################
 
 
-
+"""
 ############# STARTER CODE BELOW ###########################
 yday = datetime.combine(datetime.today() - timedelta(1),
                                   datetime.min.time())
@@ -269,3 +296,4 @@ t4 = PythonOperator(
 t2.set_upstream([t1])
 t4.set_upstream([t3])
 
+"""
