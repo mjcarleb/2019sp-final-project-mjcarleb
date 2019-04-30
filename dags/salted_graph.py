@@ -10,7 +10,6 @@ from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 from airflow.contrib.sensors.file_sensor import FileSensor
 from datetime import datetime, timedelta
-import pandas as pd
 
 ############################################################
 ############################################################
@@ -108,6 +107,8 @@ t4 = FileSensor(
 
 def check_copied_hashes_match(**context):
 
+    import pandas as pd
+
     # Set default values for these flags which will get pushed to XCOM
     re_do_copy = re_do_report = False
 
@@ -115,9 +116,11 @@ def check_copied_hashes_match(**context):
     try:
         copied_hash_past = context["task_instance"].xcom_pull(task_ids="Pass_or_Copy",
                                                               key="copied_hash_past")
-        print(f"Here is vlaue of copied_hash_past = {copied_hash_past}")
+        print(f"Here is copied_hash_past = {copied_hash_past}")
 
         # Read copied data into pd.dataframe
+        df = pd.read_csv("copied/yelp_subset_1.csv")
+        print(f"Here is shape of dataframe = {df.shape}")
 
         # Calculate copied_hash_current
 
@@ -130,6 +133,7 @@ def check_copied_hashes_match(**context):
     # If we fail to do the pull copied_hash_past...
     except:
 
+        print("CAUGHT FAILED TRY BLOCK IN check_coiped_hashes_match!!!!!!!!!! (good)")
         # Push Re_Do_Copy = Re_Do_Report = True
 
         # return tuple
