@@ -96,9 +96,9 @@ t4 = FileSensor(
 ############################################################
 # Create PythonOperator Task:  Check_Copied_Hashes_Match
 ############################################################
-# Read the copied data and calculate copied_hash_current
-#
 # Try to pull copied_hash_past from last run of Pass_or_Copy
+#
+# Read the copied data and calculate copied_hash_current
 #
 # If hashes match, push Re_Do_Copy = Re_Do_Report = False
 #
@@ -106,6 +106,43 @@ t4 = FileSensor(
 # ... push Re_Do_Copy = Re_Do_Report = True
 ############################################################
 
+def check_copied_hashes_match(**context):
+
+    # Set default values for these flags which will get pushed to XCOM
+    re_do_copy = re_do_report = False
+
+    # Try to pull copied_hash_past from last run of Pass_or_Copy
+    try:
+        copied_hash_past = context["task_instance"].xcom_pull(task_ids="Pass_or_Copy",
+                                                              key="copied_hash_past")
+        print(f"Here is vlaue of copied_hash_past = {copied_hash_past}")
+
+        # Read copied data into pd.dataframe
+
+        # Calculate copied_hash_current
+
+        # If "match" push Re_Do_Copy = Re_Do_Report = False
+
+        # Else push Re_Do_Copy = Re_Do_Report = True
+
+        # return tuple
+
+    # If we fail to do the pull copied_hash_past...
+    except:
+
+        # Push Re_Do_Copy = Re_Do_Report = True
+
+        # return tuple
+
+        # Set flags to be passed to XCOM to redo copy and redo report
+        re_do_copy = re_do_report = True
+
+
+t5 = PythonOperator(
+    task_id = "Check_Copied_Hashes_Match",
+    python_callable=check_copied_hashes_match,
+    provide_context=True,
+    dag=dag)
 
 
 ############################################################
@@ -122,9 +159,9 @@ t4 = FileSensor(
 ############################################################
 # Create PythonOperator Task:  Check_Transformed_Hashes_Match
 ############################################################
-# Read the transformed data and calculate transformed_hash_current
-#
 # Try to pull transformed_hash_past from last run of Pass_or_Transform
+#
+# Read the transformed data and calculate transformed_hash_current
 #
 # If hashes match, push Re_Do_Transform = Re_Do_Report = False
 #
@@ -149,9 +186,9 @@ t4 = FileSensor(
 ############################################################
 # Create PythonOperator Task:  Check_Report_Hashes_Match
 ############################################################
-# Read the report and calculate report_hash_current
-#
 # Try to pull report_hash_past from last run of Pass_or_Generate_Report
+#
+# Read the report and calculate report_hash_current
 #
 # If mismatch or can't pull report_hash_past ...
 # ... push Re_Do_Report = True
