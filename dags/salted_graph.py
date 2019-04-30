@@ -14,27 +14,15 @@ import pandas as pd
 
 ############################################################
 ############################################################
-# Define Global Attributes
-############################################################
-############################################################
-
-############################################################
-############################################################
 # Define Default Attributes for Operators and DAG
 ############################################################
 ############################################################
-
-# Fix this to make today
-this_day = datetime.combine(datetime.today() - timedelta(1),
-                             datetime.min.time())
 
 # Parameters passed automatically by DAG to operators
 # See BaseOperator source code for full set of possibilities
 default_args = {
     'owner': 'mjcarleb',
-    'depends_on_past': False,
-    'start_date': this_day,
-    'email_on_failure': False,
+    'start_date': datetime.today(),
     'retries': 0
 }
 
@@ -49,13 +37,14 @@ dag = DAG('Salted_Graph_Practice1',
 ############################################################
 ############################################################
 
+# Sensor task to verify existence of source data on S3
 t1 = S3KeySensor(
     task_id='Sense_S3_Source_Data',
-    poke_interval=10,
-    timeout=30,
-    bucket_key='s3://cscie29-data/pset5/yelp_data/yeld_subset_1.csv',
-    bucket_name=None,
     aws_conn_id = "aws_default",
+    bucket_key='s3://cscie29-data/pset5/yelp_data/yelp_subset_1.csv',
+    bucket_name=None,
+    poke_interval=10,
+    timeout=20,
     dag=dag)
 
 ############################################################
@@ -64,6 +53,14 @@ t1 = S3KeySensor(
 ############################################################
 ############################################################
 
+# Sensor Task to verify existence of copied data from S3
+t2 = FileSensor(
+    task_id= "Sense_Copied_Data",
+    fs_conn_id="fs_default2",
+    filepath="copied/yelp_subset_1.csv",
+    poke_interval=10,
+    timeout=20,
+    dag=dag)
 
 ############################################################
 ############################################################
@@ -71,6 +68,14 @@ t1 = S3KeySensor(
 ############################################################
 ############################################################
 
+# Sensor Task to verify existence of transformed data from copied
+t3 = FileSensor(
+    task_id= "Sense_Transformed_Data",
+    fs_conn_id="fs_default2",
+    filepath="transformed/yelp_subset_1.csv",
+    poke_interval=10,
+    timeout=20,
+    dag=dag)
 
 ############################################################
 ############################################################
@@ -78,6 +83,14 @@ t1 = S3KeySensor(
 ############################################################
 ############################################################
 
+# Sensor Task to verify existence of report from transformed data
+t4 = FileSensor(
+    task_id= "Sense_Report",
+    fs_conn_id="fs_default2",
+    filepath="reports/yelp_subset_1.txt",
+    poke_interval=10,
+    timeout=20,
+    dag=dag)
 
 ############################################################
 ############################################################
