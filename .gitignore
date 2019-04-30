@@ -77,3 +77,8 @@ logs/
 *.db
 *.pid
 *.cfg
+
+# For this project
+copied/
+reports/
+transformed/
