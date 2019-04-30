@@ -113,10 +113,21 @@ def check_copied_hashes_match(**context):
     re_do_copy = re_do_report = False
 
     # Try to pull copied_hash_past from last run of Pass_or_Copy
-    try:
-        copied_hash_past = context["task_instance"].xcom_pull(task_ids="Pass_or_Copy",
-                                                              key="copied_hash_past")
-        print(f"Here is copied_hash_past = {copied_hash_past}")
+    copied_hash_past = context["task_instance"].xcom_pull(task_ids="Pass_or_Copy",
+                                                          key="copied_hash_past")
+    print(f"Here is copied_hash_past = {copied_hash_past}")
+
+    if copied_hash_past is None:
+        print("caught copied_hash_past being None (good)!!!!!!")
+
+        # Set flags to show we need to re-copy and re-run report
+        re_do_copy = re_do_report = True
+
+        # Push Re_Do_Copy = Re_Do_Report = True
+
+        return str(f"re_do_copy={re_do_copy} & re_do_report={re_do_report}")
+
+    else:
 
         # Read copied data into pd.dataframe
         df = pd.read_csv("copied/yelp_subset_1.csv")
@@ -128,18 +139,7 @@ def check_copied_hashes_match(**context):
 
         # Else push Re_Do_Copy = Re_Do_Report = True
 
-        # return tuple
-
-    # If we fail to do the pull copied_hash_past...
-    except:
-
-        print("CAUGHT FAILED TRY BLOCK IN check_coiped_hashes_match!!!!!!!!!! (good)")
-        # Push Re_Do_Copy = Re_Do_Report = True
-
-        # return tuple
-
-        # Set flags to be passed to XCOM to redo copy and redo report
-        re_do_copy = re_do_report = True
+    return str(f"re_do_copy={re_do_copy} & re_do_report={re_do_report}")
 
 
 t5 = PythonOperator(
