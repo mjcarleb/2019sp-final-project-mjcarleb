@@ -113,12 +113,15 @@ def check_copied_hashes_match(**context):
     copied_hash_past = context["task_instance"].xcom_pull(task_ids="Pass_or_Copy",
                                                           key="copied_hash_past")
 
-    # If copied_hash_past does not exist, then re-do copy, transform and reports
+    #@@@@@@@@@@@ REMOVE
+    copied_hash_past = 17 #### Just a temporary plug
+
+    # If copied_hash_past does not exist, provoke downstream via XCOM
     if copied_hash_past is None:
 
-        # Push flags to XCOM so downstream systems can consume
+        # Push flags to XCOM to provoke downstream tasks
         context["ti"].xcom_push(key="Re_Do_Copy", value=True)
-        context["ti"].xcom_push(key="Re_Do_Hashes", value=True)
+        context["ti"].xcom_push(key="Re_Do_Transform", value=True)
         context["ti"].xcom_push(key="Re_Do_Report", value=True)
 
         # Message to the log
@@ -126,18 +129,34 @@ def check_copied_hashes_match(**context):
 
     else:
 
-        # Read copied data into pd.dataframe
-        df = pd.read_csv("copied/yelp_subset_1.csv")
-        print(f"Here is shape of dataframe = {df.shape}")
-
+        # @@@@@@@@@@@ REMOVE
         # Calculate copied_hash_current
+        copied_hash_current = 17 #### Just a temporary plug
 
-        # If "match" push Re_Do_Copy = Re_Do_Report = False
+        # @@@@@@@@@@@ CREATE DO PROGRAMMING
+        # Read copied data into pd.dataframe
+        #df = pd.read_csv("copied/yelp_subset_1.csv")
+        #Create hash of df content
 
-        # Else push Re_Do_Copy = Re_Do_Report = True
 
-        # Message to the log
-        return "copied_hash_past was not None"
+        # If past and current hashes of copied file do not match, provoke downstream via XCOM
+        if copied_hash_past != copied_hash_current:
+            context["ti"].xcom_push(key="Re_Do_Copy", value=True)
+            context["ti"].xcom_push(key="Re_Do_Transform", value=True)
+            context["ti"].xcom_push(key="Re_Do_Report", value=True)
+
+            # Message to the log
+            return "hashes did not match"
+
+
+        # If past and current hashes of copied file match, do not provoke downstream via XCOM
+        else:
+            context["ti"].xcom_push(key="Re_Do_Copy", value=False)
+            context["ti"].xcom_push(key="Re_Do_Transform", value=False)
+            context["ti"].xcom_push(key="Re_Do_Report", value=False)
+
+            # Message to the log
+            return "hashes did match"
 
 
 t5 = PythonOperator(
