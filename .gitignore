@@ -80,5 +80,6 @@ logs/
 
 # For this project
 copied/
+copied_data/
 reports/
 transformed/
