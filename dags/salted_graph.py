@@ -276,7 +276,52 @@ t7 = PythonOperator(
 ############################################################
 ############################################################
 
+def generate_report(**context):
+    """Read transform data and create report
 
+    Parameters
+    context (dict): provided by calling PythonOperator
+
+    Returns string written to log with status info
+    """
+
+    # Get the dag_hash
+    dag_hash = context["ti"].xcom_pull(task_ids='1.Generate_DAG_hash', key='DAG_hash')
+
+
+    # Read in the transformed data from the transformed directory
+    transformed_file_path = os.path.join(os.environ["AIRFLOW_HOME"],
+                                     transformed_path,
+                                     source_data_stem+"."+dag_hash+transformed_data_suffix)
+    df = pd.read_parquet(transformed_file_path)
+
+    # Use the data to create report
+    textlines = df.text.tolist()
+
+
+    # Write the text to a report in report directory
+    report_file_path = os.path.join(os.environ["AIRFLOW_HOME"],
+                                     reports_path,
+                                     source_data_stem+"."+dag_hash+report_suffix)
+    with open(report_file_path, mode="w") as f:
+        for line in textlines:
+            f.write(line)
+
+    # Message to the log
+    return str(f"Generated report with hash = {dag_hash}")
+
+# This PythonOperator reads data from copied directory
+# transforms data and writes it out to the correct
+# transformed directory.  Though, in this demo I just convert
+# to .parquet and do not do any transformations of the CSV data.
+# Since the trigger_rule is "one_success" this task is triggered
+# if t6 or t4 succeeds.
+t8 = PythonOperator(
+    task_id = "8.Generate_Report.hash",
+    python_callable=generate_report,
+    provide_context=True,
+    trigger_rule="one_success",
+    dag=dag)
 
 ############################################################
 ############################################################
@@ -307,5 +352,5 @@ t6 >> t7
 t4 >> t7
 
 # t8 depends on either t7 or t3 succeeding (trigger_rule = "one success")
-#t7 >> t8
-#t3 >> t8
+t7 >> t8
+t3 >> t8
