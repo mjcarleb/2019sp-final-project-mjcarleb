@@ -119,18 +119,16 @@ t1 = PythonOperator(
 ############################################################
 
 # Sensor Task to verify existence of report with proper dag_hash as suffix
-# Airflow supports Jinja Temlating
+# Airflow supports Jinja Templating, used to pull hash from xcom as shown below
 t2 = FileSensor(
     task_id="2.Sense_Report.hash",
     fs_conn_id="fs_airflowhome",
     filepath=os.path.join(reports_path,
                           source_data_stem + "." +
                           "{{ti.xcom_pull(task_ids='1.Generate_DAG_hash', key='DAG_hash')}}"),
-    poke_interval=10,
-    timeout=20,
+    poke_interval=5,
+    timeout=5,
     dag=dag)
-
-#{{ti.xcom_pull(task_ids='push_and_return_xcom_values', key='phoney_hash')}}
 
 ############################################################
 ############################################################
@@ -139,15 +137,18 @@ t2 = FileSensor(
 ############################################################
 ############################################################
 
-# Sensor Task to verify existence of transformed data from copied
+# Sensor Task to verify existence of transformed data with proper dag_hash as suffix
+# Airflow supports Jinja Templating, used to pull hash from xcom as shown below
 t3 = FileSensor(
-    task_id= "Sense_Transformed_Data",
-    fs_conn_id="fs_default2",
-    filepath="transformed/yelp_subset_1.csv",
-    poke_interval=10,
-    timeout=20,
+    task_id="3.Sense_Transformed.hash",
+    fs_conn_id="fs_airflowhome",
+    filepath=os.path.join(transformed_path,
+                          source_data_stem + "." +
+                          "{{ti.xcom_pull(task_ids='1.Generate_DAG_hash', key='DAG_hash')}}"),
+    poke_interval=5,
+    timeout=5,
+    trigger_rule="one_failed",
     dag=dag)
-
 
 ############################################################
 ############################################################
@@ -156,15 +157,18 @@ t3 = FileSensor(
 ############################################################
 ############################################################
 
-# Sensor Task to verify existence of copied data from S3
+# Sensor Task to verify existence of copied data with proper dag_hash as suffix
+# Airflow supports Jinja Templating, used to pull hash from xcom as shown below
 t4 = FileSensor(
-    task_id= "Sense_Copied_Data",
-    fs_conn_id="fs_default2",
-    filepath="copied/yelp_subset_1.csv",
-    poke_interval=10,
-    timeout=20,
+    task_id="4.Sense_Copied.hash",
+    fs_conn_id="fs_airflowhome",
+    filepath=os.path.join(copied_path,
+                          source_data_stem + "." +
+                          "{{ti.xcom_pull(task_ids='1.Generate_DAG_hash', key='DAG_hash')}}"),
+    poke_interval=5,
+    timeout=5,
+    trigger_rule="one_failed",
     dag=dag)
-
 
 ############################################################
 ############################################################
@@ -175,12 +179,13 @@ t4 = FileSensor(
 
 # Sensor task to verify existence of source data on S3
 t5 = S3KeySensor(
-    task_id='Sense_S3_Source_Data',
+    task_id='5.Sense_S3_Source',
     aws_conn_id = "aws_default",
-    bucket_key='s3://cscie29-data/pset5/yelp_data/yelp_subset_1.csv',
+    bucket_key=source_data_path,
     bucket_name=None,
-    poke_interval=10,
-    timeout=20,
+    poke_interval=5,
+    timeout=5,
+    trigger_rule="one_failed",
     dag=dag)
 
 ############################################################
