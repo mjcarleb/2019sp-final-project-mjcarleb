@@ -32,38 +32,34 @@ dag = DAG('Salted_Graph_Practice1',
 
 ############################################################
 ############################################################
-# Create S3KeySensor Task:  Sense_S3_Source_Data
+# Create PythonOperator Task:
+# 1.Generate_DAG.hash
 ############################################################
 ############################################################
 
-# Sensor task to verify existence of source data on S3
-t1 = S3KeySensor(
-    task_id='Sense_S3_Source_Data',
-    aws_conn_id = "aws_default",
-    bucket_key='s3://cscie29-data/pset5/yelp_data/yelp_subset_1.csv',
-    bucket_name=None,
-    poke_interval=10,
-    timeout=20,
-    dag=dag)
+
 
 ############################################################
 ############################################################
-# Create FileSensor Task:  Sense_Copied_Data
+# Create FileSensor Task:
+# 2.Sense_Report.hash
 ############################################################
 ############################################################
 
-# Sensor Task to verify existence of copied data from S3
+# Sensor Task to verify existence of report from transformed data
 t2 = FileSensor(
-    task_id= "Sense_Copied_Data",
+    task_id= "Sense_Report",
     fs_conn_id="fs_default2",
-    filepath="copied/yelp_subset_1.csv",
+    filepath="reports/yelp_subset_1.txt",
     poke_interval=10,
     timeout=20,
     dag=dag)
 
+
 ############################################################
 ############################################################
-# Create FileSensor Task:  Sense_Transformed_Data
+# Create FileSensor Task:
+# 3.Sense_Transformed.hash
 ############################################################
 ############################################################
 
@@ -76,34 +72,100 @@ t3 = FileSensor(
     timeout=20,
     dag=dag)
 
+
 ############################################################
 ############################################################
-# Create FileSensor Task:  Sense_Report
+# Create FileSensor Task:
+# 4.Sense_Copied.hash
 ############################################################
 ############################################################
 
-# Sensor Task to verify existence of report from transformed data
+# Sensor Task to verify existence of copied data from S3
 t4 = FileSensor(
-    task_id= "Sense_Report",
+    task_id= "Sense_Copied_Data",
     fs_conn_id="fs_default2",
-    filepath="reports/yelp_subset_1.txt",
+    filepath="copied/yelp_subset_1.csv",
+    poke_interval=10,
+    timeout=20,
+    dag=dag)
+
+
+############################################################
+############################################################
+# Create S3KeySensor Task:
+# 5.Sense_S3_Source
+############################################################
+############################################################
+
+# Sensor task to verify existence of source data on S3
+t5 = S3KeySensor(
+    task_id='Sense_S3_Source_Data',
+    aws_conn_id = "aws_default",
+    bucket_key='s3://cscie29-data/pset5/yelp_data/yelp_subset_1.csv',
+    bucket_name=None,
     poke_interval=10,
     timeout=20,
     dag=dag)
 
 ############################################################
 ############################################################
-# Create PythonOperator Task:  Check_Copied_Hashes_Match
+# Create BashOperator Task:
+# 6.Generate_Copied.hash
 ############################################################
-# Try to pull copied_hash_past from last run of Pass_or_Copy
-#
-# Read the copied data and calculate copied_hash_current
-#
-# If hashes match, push Re_Do_Copy = Re_Do_Report = False
-#
-# Else (mismatch or can't pull copied_hash_past) ...
-# ... push Re_Do_Copy = Re_Do_Report = True
 ############################################################
+
+
+############################################################
+############################################################
+# Create PythonOperator Task:
+# 7.Generate_Transformed.hash
+############################################################
+############################################################
+
+
+
+############################################################
+############################################################
+# Create PythonOperator Task:
+# 8.Generate_Report.hash
+############################################################
+############################################################
+
+
+
+############################################################
+############################################################
+# Define Dependencies of Tasks in the DAG
+#
+# t2 and t8 are terminal tasks, so DAG succeeds...
+# ...iff t2 or t8 succeed
+############################################################
+############################################################
+
+# t2 depends on t1 succeeding (trigger_rule = default, "all success")
+t1 >> t2
+
+# t2 depends on t3 failing (trigger_rule = "one failure")
+t2 >> t3
+
+# t4 depends on t3 failing (trigger_rule = "one failure")
+t3 >> t4
+
+# t5 depends on t4 failing (trigger_rule = "one failure")
+t4 >> t5
+
+# t6 depends on t5 succeeding (trigger_rule = default, "all success")
+t5 >> t6
+
+# t7 depends on either t6 or t4 succeeding (trigger_rule = "one success")
+t6 >> t7
+t4 >> t7
+
+# t8 depends on either t7 or t3 succeeding (trigger_rule = "one success")
+t7 >> t8
+t3 >> t8
+
+"""
 
 def check_copied_hashes_match(**context):
 
@@ -166,79 +228,7 @@ t5 = PythonOperator(
     dag=dag)
 
 
-############################################################
-############################################################
-# Create BashOperator Task:  Pass_or_Copy
-############################################################
-# Pull Re_Do_Copy from last run of Check_Copied_Hashes_Match
-#
-# Iff Re_Do_Copy == True, run Bash AWS Copy command
-############################################################
 
-
-############################################################
-############################################################
-# Create PythonOperator Task:  Check_Transformed_Hashes_Match
-############################################################
-# Try to pull transformed_hash_past from last run of Pass_or_Transform
-#
-# Read the transformed data and calculate transformed_hash_current
-#
-# If hashes match, push Re_Do_Transform = Re_Do_Report = False
-#
-# Else (mismatch or can't pull transformed_hash_past) ...
-# ... push Re_Do_Transform = Re_Do_Report = True
-############################################################
-
-
-############################################################
-############################################################
-# Create PythonOperator Task:  Pass_or_Transform
-############################################################
-# Pull Re_Do_Transform from last run of Check_Transform_Hashes_Match
-#
-# Iff Re_Do_Transform == True, run python transformation
-############################################################
-
-
-
-
-############################################################
-############################################################
-# Create PythonOperator Task:  Check_Report_Hashes_Match
-############################################################
-# Try to pull report_hash_past from last run of Pass_or_Generate_Report
-#
-# Read the report and calculate report_hash_current
-#
-# If mismatch or can't pull report_hash_past ...
-# ... push Re_Do_Report = True
-#
-# Else, push Re_Do_Report = False
-############################################################
-
-
-############################################################
-############################################################
-# Create PythonOperator Task:  Pass_or_Generate_Report
-############################################################
-# Pull Re_Report from last run of Check_Copied_Hashes_Match
-# Pull Re_Report from last run of Check_Transformed_Hashes_Match
-# Pull Re_Report from last run of Check_Report_Hashes_Match
-#
-# Iff any of flags == True, run python report generator
-############################################################
-
-
-
-############################################################
-############################################################
-# Define Dependencies of Tasks in the DAG
-############################################################
-############################################################
-
-
-"""
 ############# STARTER CODE BELOW ###########################
 yday = datetime.combine(datetime.today() - timedelta(1),
                                   datetime.min.time())
