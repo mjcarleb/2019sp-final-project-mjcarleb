@@ -4,12 +4,31 @@
 ############################################################
 ############################################################
 
+import os
+import hashlib
+
 from airflow import DAG
 from airflow.operators.sensors import S3KeySensor
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 from airflow.contrib.sensors.file_sensor import FileSensor
 from datetime import datetime, timedelta
+
+############################################################
+############################################################
+# Define Global Variables
+#
+# In future implementation these could be passed in as
+# arguments, picked up from traditional OS environmental
+# variables or Airflow variables
+############################################################
+############################################################
+
+# This is path to source code for this DAG
+DAG_PY_FILE = os.path.join(os.environ["AIRFLOW_HOME"],
+                           "dags",
+                           os.path.basename(__file__))
+
 
 ############################################################
 ############################################################
@@ -28,16 +47,53 @@ default_args = {
 # Define DAG with minimum number of parameters
 dag = DAG('Salted_Graph_Practice1',
           default_args=default_args,
-          schedule_interval='@once')
+          schedule_interval=None)
 
 ############################################################
 ############################################################
 # Create PythonOperator Task:
-# 1.Generate_DAG.hash
+# 1.Generate_DAG_hash
 ############################################################
 ############################################################
 
+def push_DAG_hash(**context):
+    """Push hash of this DAG's source code to xcom
 
+    Parameters
+    context (dict): provided by calling PythonOperator
+
+    Returns string written to log with status info
+    """
+
+    # Get salt from os environment as bytes
+    salt = os.environ["CSCI_SALT"]
+    salt_b = bytes.fromhex(salt)
+
+    # Get this DAG's source as bytes
+    with open(DAG_PY_FILE, "r") as dag_py_file:
+        dag_source = dag_py_file.read()
+    dag_source_b = dag_source.encode()
+
+    # Hash the salt and source code
+    hasher = hashlib.sha256()
+    hasher.update(salt_b)
+    hasher.update(dag_source_b)
+
+    # Take last 8 bytes as "the hash" for source
+    dag_hash = hasher.digest().hex()[:8]
+
+    # Push hash to XCOM as keyed value
+    context["ti"].xcom_push(key="DAG_hash", value=dag_hash)
+
+    # Message to the log
+    return str(f"Pushed DAG_hash to XCOM {dag_hash}")
+
+# Operator to calculate and push this DAG's hash to xcom
+t1 = PythonOperator(
+    task_id = "1.Generate_DAG_hash",
+    python_callable=push_DAG_hash,
+    provide_context=True,
+    dag=dag)
 
 ############################################################
 ############################################################
@@ -48,13 +104,12 @@ dag = DAG('Salted_Graph_Practice1',
 
 # Sensor Task to verify existence of report from transformed data
 t2 = FileSensor(
-    task_id= "Sense_Report",
+    task_id="Sense_Report.hash",
     fs_conn_id="fs_default2",
     filepath="reports/yelp_subset_1.txt",
     poke_interval=10,
     timeout=20,
     dag=dag)
-
 
 ############################################################
 ############################################################
@@ -155,15 +210,15 @@ t3 >> t4
 t4 >> t5
 
 # t6 depends on t5 succeeding (trigger_rule = default, "all success")
-t5 >> t6
+#t5 >> t6
 
 # t7 depends on either t6 or t4 succeeding (trigger_rule = "one success")
-t6 >> t7
-t4 >> t7
+#t6 >> t7
+#t4 >> t7
 
 # t8 depends on either t7 or t3 succeeding (trigger_rule = "one success")
-t7 >> t8
-t3 >> t8
+#t7 >> t8
+#t3 >> t8
 
 """
 
