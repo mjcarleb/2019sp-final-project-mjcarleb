@@ -7,6 +7,7 @@
 import os
 import hashlib
 from pathlib import Path
+import pandas as pd
 
 from airflow import DAG
 from airflow.operators.sensors import S3KeySensor
@@ -234,22 +235,33 @@ def transform_data(**context):
     """
 
     # Get the dag_hash
+    dag_hash = context["ti"].xcom_pull(task_ids='1.Generate_DAG_hash', key='DAG_hash')
 
-    # Read in the data from the copied directory
 
-    # Does something to transform the data
+    # Read in the csv data from the copied directory
+    copied_file_path = os.path.join(os.environ["AIRFLOW_HOME"],
+                                     copied_path,
+                                     source_data_stem+"."+dag_hash+source_data_suffix)
+    df = pd.read_csv(copied_file_path)
 
-    # Make sure the directory to which to write exists
+    # Do something to transform the data though in this demo I do not
 
     # Write the data out to the correct directory
     # with dag_hash as suffix
-    dag_hash=6
-
+    transformed_file_path = os.path.join(os.environ["AIRFLOW_HOME"],
+                                     transformed_path,
+                                     source_data_stem+"."+dag_hash+transformed_data_suffix)
+    df.to_parquet(transformed_file_path)
 
     # Message to the log
     return str(f"Transformed copied data with hash = {dag_hash}")
 
-# Operator to calculate and push this DAG's hash to xcom
+# This PythonOperator reads data from copied directory
+# transforms data and writes it out to the correct
+# transformed directory.  Though, in this demo I just convert
+# to .parquet and do not do any transformations of the CSV data.
+# Since the trigger_rule is "one_success" this task is triggered
+# if t6 or t4 succeeds.
 t7 = PythonOperator(
     task_id = "7.Generate_Transform.hash",
     python_callable=transform_data,
@@ -291,8 +303,8 @@ t4 >> t5
 t5 >> t6
 
 # t7 depends on either t6 or t4 succeeding (trigger_rule = "one success")
-#t6 >> t7
-#t4 >> t7
+t6 >> t7
+t4 >> t7
 
 # t8 depends on either t7 or t3 succeeding (trigger_rule = "one success")
 #t7 >> t8
