@@ -65,7 +65,7 @@ default_args = {
 }
 
 # Define DAG with minimum number of parameters
-dag = DAG('Salted_Graph_Practice1',
+dag = DAG('Content_Addressable_DAG',
           default_args=default_args,
           schedule_interval=None)
 
