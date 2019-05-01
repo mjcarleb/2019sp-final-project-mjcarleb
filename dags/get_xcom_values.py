@@ -26,7 +26,7 @@ default_args = {
 }
 
 # Define DAG with minimum number of parameters
-dag = DAG('Salted_Graph_Practice2',
+dag = DAG('bash_xcom_pull_POC',
           default_args=default_args,
           schedule_interval='@once')
 
@@ -36,23 +36,26 @@ dag = DAG('Salted_Graph_Practice2',
 ############################################################
 ############################################################
 
-def read_some_xcom_values(**context):
+def push_and_return_xcom_values(**context):
 
-
-    old_key_value = context["task_instance"].xcom_pull(task_ids="read_some_xcom_values",
-                                                           key="value_of_17")
 
     # Push flags to XCOM to provoke downstream tasks
-    context["ti"].xcom_push(key="value_of_17_orbadNone", value=old_key_value)
+    context["ti"].xcom_push(key="phoney_hash", value="bash.tmp")
 
     # Message to the log
-    return str(f"copy of old key value={old_key_value}")
+    return str(f"I am not sure xcom on return!!!!")
 
-
-
-t = PythonOperator(
-    task_id = "read_some_xcom_values",
-    python_callable=read_some_xcom_values,
+t1 = PythonOperator(
+    task_id = "push_and_return_xcom_values",
+    python_callable=push_and_return_xcom_values,
     provide_context=True,
     dag=dag)
 
+t2 = BashOperator(
+    task_id = "pull_from_bash",
+    bash_command = "touch $AIRFLOW_HOME/{{ti.xcom_pull(task_ids='push_and_return_xcom_values', key='phoney_hash')}}",
+    provide_context=True,
+    xcom_push=True,
+    dag=dag)
+
+t1>>t2
