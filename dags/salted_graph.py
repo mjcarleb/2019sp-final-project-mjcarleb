@@ -6,6 +6,7 @@
 
 import os
 import hashlib
+from pathlib import Path
 
 from airflow import DAG
 from airflow.operators.sensors import S3KeySensor
@@ -20,15 +21,30 @@ from datetime import datetime, timedelta
 #
 # In future implementation these could be passed in as
 # arguments, picked up from traditional OS environmental
-# variables or Airflow variables
+# variables or Airflow variables and much more complex
+# file and path name processing, which I am NOT trying
+# to simulate here.  Thus, I am largely stipulating values
+# I use below without too much abstraction.
 ############################################################
 ############################################################
 
 # This is path to source code for this DAG
-DAG_PY_FILE = os.path.join(os.environ["AIRFLOW_HOME"],
-                           "dags",
-                           os.path.basename(__file__))
+dag_source_path = os.path.join(os.environ["AIRFLOW_HOME"],
+                               "dags",
+                               os.path.basename(__file__))
 
+# These are paths under AIRFLOW_HOME to where data used by DAG is stored
+copied_path = os.path.join("copied_data")
+transformed_path = os.path.join("transformed_data")
+reports_path = os.path.join("reports")
+
+# Attributes of file we are processing...again, in real world
+# we might process many files and include much more copmlex
+# logic to parse and manipulate path and file names with
+# utilities from os.path, etc.
+source_data_path = "s3://cscie29-data/pset5/yelp_data/yelp_subset_1.csv"
+source_data_stem = Path(source_data_path).stem
+source_data_suffix = Path(source_data_path).suffix
 
 ############################################################
 ############################################################
@@ -70,7 +86,7 @@ def push_DAG_hash(**context):
     salt_b = bytes.fromhex(salt)
 
     # Get this DAG's source as bytes
-    with open(DAG_PY_FILE, "r") as dag_py_file:
+    with open(dag_source_path, "r") as dag_py_file:
         dag_source = dag_py_file.read()
     dag_source_b = dag_source.encode()
 
@@ -102,14 +118,19 @@ t1 = PythonOperator(
 ############################################################
 ############################################################
 
-# Sensor Task to verify existence of report from transformed data
+# Sensor Task to verify existence of report with proper dag_hash as suffix
+# Airflow supports Jinja Temlating
 t2 = FileSensor(
-    task_id="Sense_Report.hash",
-    fs_conn_id="fs_default2",
-    filepath="reports/yelp_subset_1.txt",
+    task_id="2.Sense_Report.hash",
+    fs_conn_id="fs_airflowhome",
+    filepath=os.path.join(reports_path,
+                          source_data_stem + "." +
+                          "{{ti.xcom_pull(task_ids='1.Generate_DAG_hash', key='DAG_hash')}}"),
     poke_interval=10,
     timeout=20,
     dag=dag)
+
+#{{ti.xcom_pull(task_ids='push_and_return_xcom_values', key='phoney_hash')}}
 
 ############################################################
 ############################################################
