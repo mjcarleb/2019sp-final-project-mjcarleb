@@ -21,10 +21,10 @@ from datetime import datetime, timedelta
 #
 # In future implementation these could be passed in as
 # arguments, picked up from traditional OS environmental
-# variables or Airflow variables and much more complex
-# file and path name processing, which I am NOT trying
+# variables or Airflow variables and involve more complex
+# file and path name processing--which I am NOT trying
 # to simulate here.  Thus, I am largely stipulating values
-# I use below without too much abstraction.
+# I use below without too much programming.
 ############################################################
 ############################################################
 
@@ -120,6 +120,7 @@ t1 = PythonOperator(
 
 # Sensor Task to verify existence of report with proper dag_hash as suffix
 # Airflow supports Jinja Templating, used to pull hash from xcom as shown below
+# fs_conn_id is setup in Admin panel on Web UI and specifies starting path on local fs
 t2 = FileSensor(
     task_id="2.Sense_Report.hash",
     fs_conn_id="fs_airflowhome",
@@ -139,6 +140,7 @@ t2 = FileSensor(
 
 # Sensor Task to verify existence of transformed data with proper dag_hash as suffix
 # Airflow supports Jinja Templating, used to pull hash from xcom as shown below
+# fs_conn_id is setup in Admin panel on Web UI and specifies starting path on local fs
 t3 = FileSensor(
     task_id="3.Sense_Transformed.hash",
     fs_conn_id="fs_airflowhome",
@@ -159,6 +161,7 @@ t3 = FileSensor(
 
 # Sensor Task to verify existence of copied data with proper dag_hash as suffix
 # Airflow supports Jinja Templating, used to pull hash from xcom as shown below
+# fs_conn_id is setup in Admin panel on Web UI and specifies starting path on local fs
 t4 = FileSensor(
     task_id="4.Sense_Copied.hash",
     fs_conn_id="fs_airflowhome",
@@ -178,6 +181,9 @@ t4 = FileSensor(
 ############################################################
 
 # Sensor task to verify existence of source data on S3
+# aws_conn_id is setup in Admin panel on Web UI (I used default provided by Airflow)
+# In this case, AWS CLI is getting credentials from ~/.aws, though these could be
+# encrypted as variables in Airflow
 t5 = S3KeySensor(
     task_id='5.Sense_S3_Source',
     aws_conn_id = "aws_default",
@@ -194,6 +200,19 @@ t5 = S3KeySensor(
 # 6.Generate_Copied.hash
 ############################################################
 ############################################################
+
+# This BashOperator copies data from S3 to local drive
+# using AWS CLI (which needs to be available in OS)
+# In this case, AWS CLI is getting credentials from ~/.aws, though these could be
+# encrypted as variables in Airflow
+t6 = BashOperator(
+    task_id='6.Generate_Copied.hash',
+    bash_command="aws s3 cp " + source_data_path + " " +
+                 os.path.join(os.environ['AIRFLOW_HOME'],
+                              copied_path,
+                              source_data_stem + "." +
+                              "{{ti.xcom_pull(task_ids='1.Generate_DAG_hash', key='DAG_hash')}}"),
+    dag=dag)
 
 
 ############################################################
@@ -236,7 +255,7 @@ t3 >> t4
 t4 >> t5
 
 # t6 depends on t5 succeeding (trigger_rule = default, "all success")
-#t5 >> t6
+t5 >> t6
 
 # t7 depends on either t6 or t4 succeeding (trigger_rule = "one success")
 #t6 >> t7
