@@ -1,4 +1,4 @@
-name: airflow4
+name: airflow5
 
 dependencies:
 - matplotlib
@@ -14,6 +14,7 @@ dependencies:
 - jupyterlab
 - botocore
 - boto3
+- pyarrow
 
 - pip:
   - apache-airflow
