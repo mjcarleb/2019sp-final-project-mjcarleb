@@ -45,6 +45,9 @@ reports_path = os.path.join("reports")
 source_data_path = "s3://cscie29-data/pset5/yelp_data/yelp_subset_1.csv"
 source_data_stem = Path(source_data_path).stem
 source_data_suffix = Path(source_data_path).suffix
+copied_data_suffix = source_data_suffix
+transformed_data_suffix = ".parquet"
+report_suffix = ".txt"
 
 ############################################################
 ############################################################
@@ -125,8 +128,8 @@ t2 = FileSensor(
     task_id="2.Sense_Report.hash",
     fs_conn_id="fs_airflowhome",
     filepath=os.path.join(reports_path,
-                          source_data_stem + "." +
-                          "{{ti.xcom_pull(task_ids='1.Generate_DAG_hash', key='DAG_hash')}}"),
+                          source_data_stem+"."+
+                          "{{ti.xcom_pull(task_ids='1.Generate_DAG_hash', key='DAG_hash')}}") + report_suffix,
     poke_interval=5,
     timeout=5,
     dag=dag)
@@ -146,7 +149,7 @@ t3 = FileSensor(
     fs_conn_id="fs_airflowhome",
     filepath=os.path.join(transformed_path,
                           source_data_stem + "." +
-                          "{{ti.xcom_pull(task_ids='1.Generate_DAG_hash', key='DAG_hash')}}"),
+                          "{{ti.xcom_pull(task_ids='1.Generate_DAG_hash', key='DAG_hash')}}") + transformed_data_suffix,
     poke_interval=5,
     timeout=5,
     trigger_rule="one_failed",
@@ -167,7 +170,7 @@ t4 = FileSensor(
     fs_conn_id="fs_airflowhome",
     filepath=os.path.join(copied_path,
                           source_data_stem + "." +
-                          "{{ti.xcom_pull(task_ids='1.Generate_DAG_hash', key='DAG_hash')}}"),
+                          "{{ti.xcom_pull(task_ids='1.Generate_DAG_hash', key='DAG_hash')}}") + source_data_suffix,
     poke_interval=5,
     timeout=5,
     trigger_rule="one_failed",
@@ -211,9 +214,8 @@ t6 = BashOperator(
                  os.path.join(os.environ['AIRFLOW_HOME'],
                               copied_path,
                               source_data_stem + "." +
-                              "{{ti.xcom_pull(task_ids='1.Generate_DAG_hash', key='DAG_hash')}}"),
+                              "{{ti.xcom_pull(task_ids='1.Generate_DAG_hash', key='DAG_hash')}}")+source_data_suffix,
     dag=dag)
-
 
 ############################################################
 ############################################################
@@ -222,7 +224,38 @@ t6 = BashOperator(
 ############################################################
 ############################################################
 
+def transform_data(**context):
+    """Transform data from copied path & put in transformed path
 
+    Parameters
+    context (dict): provided by calling PythonOperator
+
+    Returns string written to log with status info
+    """
+
+    # Get the dag_hash
+
+    # Read in the data from the copied directory
+
+    # Does something to transform the data
+
+    # Make sure the directory to which to write exists
+
+    # Write the data out to the correct directory
+    # with dag_hash as suffix
+    dag_hash=6
+
+
+    # Message to the log
+    return str(f"Transformed copied data with hash = {dag_hash}")
+
+# Operator to calculate and push this DAG's hash to xcom
+t7 = PythonOperator(
+    task_id = "7.Generate_Transform.hash",
+    python_callable=transform_data,
+    provide_context=True,
+    trigger_rule="one_success",
+    dag=dag)
 
 ############################################################
 ############################################################
@@ -264,197 +297,3 @@ t5 >> t6
 # t8 depends on either t7 or t3 succeeding (trigger_rule = "one success")
 #t7 >> t8
 #t3 >> t8
-
-"""
-
-def check_copied_hashes_match(**context):
-
-    import pandas as pd
-
-    # Try to pull copied_hash_past from last run of Pass_or_Copy
-    copied_hash_past = context["task_instance"].xcom_pull(task_ids="Pass_or_Copy",
-                                                          key="copied_hash_past")
-
-    #@@@@@@@@@@@ REMOVE
-    copied_hash_past = 17 #### Just a temporary plug
-
-    # If copied_hash_past does not exist, provoke downstream via XCOM
-    if copied_hash_past is None:
-
-        # Push flags to XCOM to provoke downstream tasks
-        context["ti"].xcom_push(key="Re_Do_Copy", value=True)
-        context["ti"].xcom_push(key="Re_Do_Transform", value=True)
-        context["ti"].xcom_push(key="Re_Do_Report", value=True)
-
-        # Message to the log
-        return "copied_hash_past was None"
-
-    else:
-
-        # @@@@@@@@@@@ REMOVE
-        # Calculate copied_hash_current
-        copied_hash_current = 17 #### Just a temporary plug
-
-        # @@@@@@@@@@@ CREATE DO PROGRAMMING
-        # Read copied data into pd.dataframe
-        #df = pd.read_csv("copied/yelp_subset_1.csv")
-        #Create hash of df content
-
-
-        # If past and current hashes of copied file do not match, provoke downstream via XCOM
-        if copied_hash_past != copied_hash_current:
-            context["ti"].xcom_push(key="Re_Do_Copy", value=True)
-            context["ti"].xcom_push(key="Re_Do_Transform", value=True)
-            context["ti"].xcom_push(key="Re_Do_Report", value=True)
-
-            # Message to the log
-            return "hashes did not match"
-
-
-        # If past and current hashes of copied file match, do not provoke downstream via XCOM
-        else:
-            context["ti"].xcom_push(key="Re_Do_Copy", value=False)
-            context["ti"].xcom_push(key="Re_Do_Transform", value=False)
-            context["ti"].xcom_push(key="Re_Do_Report", value=False)
-
-            # Message to the log
-            return "hashes did match"
-
-
-t5 = PythonOperator(
-    task_id = "Check_Copied_Hashes_Match",
-    python_callable=check_copied_hashes_match,
-    provide_context=True,
-    dag=dag)
-
-
-
-############# STARTER CODE BELOW ###########################
-yday = datetime.combine(datetime.today() - timedelta(1),
-                                  datetime.min.time())
-
-
-def print_my_name(my_name):
-
-    print(f"hello, {my_name}")
-
-    df = pd.read_csv("~/yelp1.csv")
-    print(df.shape)
-    return "Whatever you return gets printed in logs"
-
-
-default_args = {
-    'owner': 'mjcarleb',
-    'depends_on_past': False,
-    'start_date': yday,
-    'email_on_failure': False,
-    'email_on_retry': False,
-    'retries': 0,
-    'retry_delay': timedelta(minutes=5)
-}
-
-dag = DAG('pass_arg_print_name2',
-          default_args=default_args,
-          schedule_interval='@once')
-
-t1 = S3KeySensor(
-    task_id='detect',
-    poke_interval=0,
-    timeout=10,
-    bucket_key='s3://cscie29-data/pset5/yelp_data/yelp_subset_1.csv',
-    bucket_name=None,
-    aws_conn_id = "aws_default",
-    dag=dag)
-
-t2 = BashOperator(
-    task_id='change_dir',
-    depends_on_past=False,
-    bash_command="cd $AIRFLOW_HOME",
-    dag=dag)
-
-t3 = BashOperator(
-    task_id='touch_as_proof',
-    depends_on_past=False,
-    bash_command="touch ~/iwashere.txt",
-    dag=dag)
-
-t4 = BashOperator(
-    task_id='copy_s3_local',
-    depends_on_past=False,
-    bash_command="aws s3 cp s3://cscie29-data/pset5/yelp_data/yelp_subset_1.csv ~/yelp1.csv",
-    dag=dag)
-
-
-t5 = PythonOperator(
-    task_id = "pandas_python_operator",
-    provide_context=False,
-    python_callable=print_my_name,
-    op_kwargs={"my_name": "MarkJoseph"},
-    dag=dag)
-
-t2.set_upstream(t1)
-t3.set_upstream(t2)
-t4.set_upstream(t3)
-t5.set_upstream(t4)
-
-def push_via_return():
-    return 10
-
-def pull_via_return(**context):
-    value1 = context["task_instance"].xcom_pull(task_ids="t_push_via_return")
-    print(f"Value pulled via XCOM pull by return (10?) = {value1}")
-    return "Finished pull via return"
-
-
-def push_via_key(**kwargs):
-    kwargs["ti"].xcom_push(key="pushed_via_key", value=20)
-
-def pull_via_key(**context):
-    value1 = context["task_instance"].xcom_pull(task_ids="t_push_via_key",
-                                                key="pushed_via_key")
-    print(f"Value pulled via XCOM pull by key (20?) = {value1}")
-    return "Finished pull via key"
-
-
-default_args = {
-    'owner': 'mjcarleb',
-    'depends_on_past': False,
-    'start_date': yday,
-    'email_on_failure': False,
-    'retries': 0
-}
-
-dag = DAG('demo_XCOM9',
-          default_args=default_args,
-          schedule_interval='@once')
-
-t1 = PythonOperator(
-    task_id = "t_push_via_return",
-    provide_context=False,
-    python_callable=push_via_return,
-    dag=dag)
-
-
-t2 = PythonOperator(
-    task_id = "t_pull_via_return",
-    provide_context=True,
-    python_callable=pull_via_return,
-    dag=dag)
-
-t3 = PythonOperator(
-    task_id = "t_push_via_key",
-    provide_context=True,
-    python_callable=push_via_key,
-    dag=dag)
-
-
-t4 = PythonOperator(
-    task_id = "t_pull_via_key",
-    provide_context=True,
-    python_callable=pull_via_key,
-    dag=dag)
-
-t2.set_upstream([t1])
-t4.set_upstream([t3])
-
-"""
