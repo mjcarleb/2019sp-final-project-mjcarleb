@@ -55,7 +55,6 @@ t2 = BashOperator(
     task_id = "pull_from_bash",
     bash_command = "touch $AIRFLOW_HOME/{{ti.xcom_pull(task_ids='push_and_return_xcom_values', key='phoney_hash')}}",
     provide_context=True,
-    xcom_push=True,
     dag=dag)
 
 t1>>t2
