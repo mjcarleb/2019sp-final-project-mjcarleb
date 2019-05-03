@@ -68,6 +68,7 @@ docs/_build
 .mypy_cache/
 
 # Stale old files or project specific not for others
+logs/
 *backup*
 *old*
 *tmp*

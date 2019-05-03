@@ -1,27 +1,0 @@
-[2019-05-01 13:37:59,946] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.6.Generate_Copied.hash 2019-05-01T17:36:43.982653+00:00 [queued]>
-[2019-05-01 13:37:59,950] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.6.Generate_Copied.hash 2019-05-01T17:36:43.982653+00:00 [queued]>
-[2019-05-01 13:37:59,950] {__init__.py:1353} INFO - 
---------------------------------------------------------------------------------
-[2019-05-01 13:37:59,950] {__init__.py:1354} INFO - Starting attempt 1 of 1
-[2019-05-01 13:37:59,950] {__init__.py:1355} INFO - 
---------------------------------------------------------------------------------
-[2019-05-01 13:37:59,958] {__init__.py:1374} INFO - Executing <Task(BashOperator): 6.Generate_Copied.hash> on 2019-05-01T17:36:43.982653+00:00
-[2019-05-01 13:37:59,958] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'Salted_Graph_Practice1', '6.Generate_Copied.hash', '2019-05-01T17:36:43.982653+00:00', '--job_id', '321', '--raw', '-sd', 'DAGS_FOLDER/salted_graph.py', '--cfg_path', '/tmp/tmpykbianfv']
-[2019-05-01 13:38:00,220] {base_task_runner.py:101} INFO - Job 321: Subtask 6.Generate_Copied.hash /home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/configuration.py:214: FutureWarning: The task_runner setting in [core] has the old default value of 'BashTaskRunner'. This value has been changed to 'StandardTaskRunner' in the running config, but please update your config before Apache Airflow 2.0.
-[2019-05-01 13:38:00,220] {base_task_runner.py:101} INFO - Job 321: Subtask 6.Generate_Copied.hash   FutureWarning,
-[2019-05-01 13:38:00,367] {base_task_runner.py:101} INFO - Job 321: Subtask 6.Generate_Copied.hash [2019-05-01 13:38:00,367] {__init__.py:51} INFO - Using executor SequentialExecutor
-[2019-05-01 13:38:00,505] {base_task_runner.py:101} INFO - Job 321: Subtask 6.Generate_Copied.hash [2019-05-01 13:38:00,505] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/salted_graph.py
-[2019-05-01 13:38:00,526] {base_task_runner.py:101} INFO - Job 321: Subtask 6.Generate_Copied.hash [2019-05-01 13:38:00,525] {cli.py:517} INFO - Running <TaskInstance: Salted_Graph_Practice1.6.Generate_Copied.hash 2019-05-01T17:36:43.982653+00:00 [running]> on host localhost.localdomain
-[2019-05-01 13:38:00,533] {bash_operator.py:81} INFO - Tmp dir root location: 
- /tmp
-[2019-05-01 13:38:00,534] {bash_operator.py:90} INFO - Exporting the following env vars:
-AIRFLOW_CTX_DAG_ID=Salted_Graph_Practice1
-AIRFLOW_CTX_TASK_ID=6.Generate_Copied.hash
-AIRFLOW_CTX_EXECUTION_DATE=2019-05-01T17:36:43.982653+00:00
-AIRFLOW_CTX_DAG_RUN_ID=manual__2019-05-01T17:36:43.982653+00:00
-[2019-05-01 13:38:00,534] {bash_operator.py:104} INFO - Temporary script location: /tmp/airflowtmpx9qijhbo/6.Generate_Copied.hash_e758ppw
-[2019-05-01 13:38:00,534] {bash_operator.py:114} INFO - Running command: aws s3 cp s3://cscie29-data/pset5/yelp_data/yelp_subset_1.csv /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/copied_data/yelp_subset_1.cade5c65
-[2019-05-01 13:38:00,537] {bash_operator.py:123} INFO - Output:
-[2019-05-01 13:38:07,879] {bash_operator.py:127} INFO - Completed 256.0 KiB/6.6 MiB (213.9 KiB/s) with 1 file(s) remainingCompleted 512.0 KiB/6.6 MiB (408.0 KiB/s) with 1 file(s) remainingCompleted 768.0 KiB/6.6 MiB (595.9 KiB/s) with 1 file(s) remainingCompleted 1.0 MiB/6.6 MiB (782.2 KiB/s) with 1 file(s) remaining  Completed 1.2 MiB/6.6 MiB (967.1 KiB/s) with 1 file(s) remaining  Completed 1.5 MiB/6.6 MiB (1.1 MiB/s) with 1 file(s) remaining    Completed 1.8 MiB/6.6 MiB (1.3 MiB/s) with 1 file(s) remaining    Completed 2.0 MiB/6.6 MiB (1.5 MiB/s) with 1 file(s) remaining    Completed 2.2 MiB/6.6 MiB (1.5 MiB/s) with 1 file(s) remaining    Completed 2.5 MiB/6.6 MiB (1.6 MiB/s) with 1 file(s) remaining    Completed 2.8 MiB/6.6 MiB (1.8 MiB/s) with 1 file(s) remaining    Completed 3.0 MiB/6.6 MiB (2.0 MiB/s) with 1 file(s) remaining    Completed 3.2 MiB/6.6 MiB (2.1 MiB/s) with 1 file(s) remaining    Completed 3.5 MiB/6.6 MiB (2.3 MiB/s) with 1 file(s) remaining    Completed 3.8 MiB/6.6 MiB (2.4 MiB/s) with 1 file(s) remaining    Completed 4.0 MiB/6.6 MiB (2.6 MiB/s) with 1 file(s) remaining    Completed 4.2 MiB/6.6 MiB (2.7 MiB/s) with 1 file(s) remaining    Completed 4.5 MiB/6.6 MiB (2.9 MiB/s) with 1 file(s) remaining    Completed 4.8 MiB/6.6 MiB (3.0 MiB/s) with 1 file(s) remaining    Completed 5.0 MiB/6.6 MiB (3.0 MiB/s) with 1 file(s) remaining    Completed 5.2 MiB/6.6 MiB (3.1 MiB/s) with 1 file(s) remaining    Completed 5.5 MiB/6.6 MiB (3.3 MiB/s) with 1 file(s) remaining    Completed 5.8 MiB/6.6 MiB (3.4 MiB/s) with 1 file(s) remaining    Completed 6.0 MiB/6.6 MiB (3.5 MiB/s) with 1 file(s) remaining    Completed 6.2 MiB/6.6 MiB (3.7 MiB/s) with 1 file(s) remaining    Completed 6.5 MiB/6.6 MiB (3.8 MiB/s) with 1 file(s) remaining    Completed 6.6 MiB/6.6 MiB (3.8 MiB/s) with 1 file(s) remaining    download: s3://cscie29-data/pset5/yelp_data/yelp_subset_1.csv to ../../home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/copied_data/yelp_subset_1.cade5c65
-[2019-05-01 13:38:07,940] {bash_operator.py:131} INFO - Command exited with return code 0
-[2019-05-01 13:38:09,971] {logging_mixin.py:95} INFO - [2019-05-01 13:38:09,970] {jobs.py:2562} INFO - Task exited with return code 0
