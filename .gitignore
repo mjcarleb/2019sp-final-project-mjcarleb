@@ -71,16 +71,8 @@ docs/_build
 *backup*
 *old*
 *tmp*
+copied/
+transformed/
 
 # Airflow related
-logs/
-*.db
 *.pid
-*.cfg
-
-# For this project
-copied/
-copied_data/
-reports/
-transformed/
-transformed_data/
