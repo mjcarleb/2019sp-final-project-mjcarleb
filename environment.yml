@@ -1,0 +1,20 @@
+name: airflow5
+
+dependencies:
+- matplotlib
+- nbconvert
+- numpy
+- pandas
+- scipy
+- seaborn
+- scikit-learn
+- dask
+- dask-ml
+- jupyter
+- jupyterlab
+- botocore
+- boto3
+- pyarrow
+
+- pip:
+  - apache-airflow
