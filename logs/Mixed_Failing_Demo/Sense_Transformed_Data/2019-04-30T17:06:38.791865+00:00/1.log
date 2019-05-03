@@ -1,0 +1,17 @@
+[2019-04-30 17:06:47,212] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Mixed_Failing_Demo.Sense_Transformed_Data 2019-04-30T17:06:38.791865+00:00 [queued]>
+[2019-04-30 17:06:47,214] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Mixed_Failing_Demo.Sense_Transformed_Data 2019-04-30T17:06:38.791865+00:00 [queued]>
+[2019-04-30 17:06:47,214] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2019-04-30 17:06:47,214] {__init__.py:1354} INFO - Starting attempt 1 of 1
+[2019-04-30 17:06:47,214] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2019-04-30 17:06:47,225] {__init__.py:1374} INFO - Executing <Task(FileSensor): Sense_Transformed_Data> on 2019-04-30T17:06:38.791865+00:00
+[2019-04-30 17:06:47,225] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'Mixed_Failing_Demo', 'Sense_Transformed_Data', '2019-04-30T17:06:38.791865+00:00', '--job_id', '227', '--raw', '-sd', 'DAGS_FOLDER/mixed_failing.py', '--cfg_path', '/tmp/tmplf4bruf8']
+[2019-04-30 17:06:47,477] {base_task_runner.py:101} INFO - Job 227: Subtask Sense_Transformed_Data /home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/configuration.py:214: FutureWarning: The task_runner setting in [core] has the old default value of 'BashTaskRunner'. This value has been changed to 'StandardTaskRunner' in the running config, but please update your config before Apache Airflow 2.0.
+[2019-04-30 17:06:47,478] {base_task_runner.py:101} INFO - Job 227: Subtask Sense_Transformed_Data   FutureWarning,
+[2019-04-30 17:06:47,629] {base_task_runner.py:101} INFO - Job 227: Subtask Sense_Transformed_Data [2019-04-30 17:06:47,628] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-04-30 17:06:47,776] {base_task_runner.py:101} INFO - Job 227: Subtask Sense_Transformed_Data [2019-04-30 17:06:47,776] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/mixed_failing.py
+[2019-04-30 17:06:47,797] {base_task_runner.py:101} INFO - Job 227: Subtask Sense_Transformed_Data [2019-04-30 17:06:47,797] {cli.py:517} INFO - Running <TaskInstance: Mixed_Failing_Demo.Sense_Transformed_Data 2019-04-30T17:06:38.791865+00:00 [running]> on host localhost.localdomain
+[2019-04-30 17:06:47,806] {file_sensor.py:60} INFO - Poking for file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/transformed/yelp_subset_1.csv
+[2019-04-30 17:06:47,806] {base_sensor_operator.py:124} INFO - Success criteria met. Exiting.
+[2019-04-30 17:06:52,219] {logging_mixin.py:95} INFO - [2019-04-30 17:06:52,219] {jobs.py:2562} INFO - Task exited with return code 0

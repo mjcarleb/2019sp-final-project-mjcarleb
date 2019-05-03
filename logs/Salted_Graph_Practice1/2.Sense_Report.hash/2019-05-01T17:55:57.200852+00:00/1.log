@@ -1,0 +1,41 @@
+[2019-05-01 13:56:21,411] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.2.Sense_Report.hash 2019-05-01T17:55:57.200852+00:00 [queued]>
+[2019-05-01 13:56:21,416] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.2.Sense_Report.hash 2019-05-01T17:55:57.200852+00:00 [queued]>
+[2019-05-01 13:56:21,416] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2019-05-01 13:56:21,416] {__init__.py:1354} INFO - Starting attempt 1 of 1
+[2019-05-01 13:56:21,416] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2019-05-01 13:56:21,424] {__init__.py:1374} INFO - Executing <Task(FileSensor): 2.Sense_Report.hash> on 2019-05-01T17:55:57.200852+00:00
+[2019-05-01 13:56:21,424] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'Salted_Graph_Practice1', '2.Sense_Report.hash', '2019-05-01T17:55:57.200852+00:00', '--job_id', '324', '--raw', '-sd', 'DAGS_FOLDER/salted_graph.py', '--cfg_path', '/tmp/tmp358rq9on']
+[2019-05-01 13:56:21,712] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash /home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/configuration.py:214: FutureWarning: The task_runner setting in [core] has the old default value of 'BashTaskRunner'. This value has been changed to 'StandardTaskRunner' in the running config, but please update your config before Apache Airflow 2.0.
+[2019-05-01 13:56:21,712] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash   FutureWarning,
+[2019-05-01 13:56:21,875] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash [2019-05-01 13:56:21,875] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-05-01 13:56:22,018] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash [2019-05-01 13:56:22,018] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/salted_graph.py
+[2019-05-01 13:56:22,040] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash [2019-05-01 13:56:22,040] {cli.py:517} INFO - Running <TaskInstance: Salted_Graph_Practice1.2.Sense_Report.hash 2019-05-01T17:55:57.200852+00:00 [running]> on host localhost.localdomain
+[2019-05-01 13:56:22,049] {file_sensor.py:60} INFO - Poking for file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/reports/yelp_subset_1.{ti.xcom_pull(task_ids='1.Generate_DAG_hash', key='DAG_hash')}..csv
+[2019-05-01 13:56:27,059] {file_sensor.py:60} INFO - Poking for file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/reports/yelp_subset_1.{ti.xcom_pull(task_ids='1.Generate_DAG_hash', key='DAG_hash')}..csv
+[2019-05-01 13:56:27,066] {__init__.py:1580} ERROR - Snap. Time is OUT.
+Traceback (most recent call last):
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 1441, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/sensors/base_sensor_operator.py", line 117, in execute
+    raise AirflowSensorTimeout('Snap. Time is OUT.')
+airflow.exceptions.AirflowSensorTimeout: Snap. Time is OUT.
+[2019-05-01 13:56:27,070] {__init__.py:1611} INFO - Marking task as FAILED.
+[2019-05-01 13:56:27,105] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash Traceback (most recent call last):
+[2019-05-01 13:56:27,105] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/bin/airflow", line 32, in <module>
+[2019-05-01 13:56:27,105] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash     args.func(args)
+[2019-05-01 13:56:27,105] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/utils/cli.py", line 74, in wrapper
+[2019-05-01 13:56:27,105] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash     return f(*args, **kwargs)
+[2019-05-01 13:56:27,105] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/bin/cli.py", line 523, in run
+[2019-05-01 13:56:27,105] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash     _run(args, dag, ti)
+[2019-05-01 13:56:27,105] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/bin/cli.py", line 442, in _run
+[2019-05-01 13:56:27,105] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash     pool=args.pool,
+[2019-05-01 13:56:27,105] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/utils/db.py", line 73, in wrapper
+[2019-05-01 13:56:27,105] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash     return func(*args, **kwargs)
+[2019-05-01 13:56:27,105] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 1441, in _run_raw_task
+[2019-05-01 13:56:27,105] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash     result = task_copy.execute(context=context)
+[2019-05-01 13:56:27,105] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/sensors/base_sensor_operator.py", line 117, in execute
+[2019-05-01 13:56:27,105] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash     raise AirflowSensorTimeout('Snap. Time is OUT.')
+[2019-05-01 13:56:27,105] {base_task_runner.py:101} INFO - Job 324: Subtask 2.Sense_Report.hash airflow.exceptions.AirflowSensorTimeout: Snap. Time is OUT.
+[2019-05-01 13:56:31,439] {logging_mixin.py:95} INFO - [2019-05-01 13:56:31,439] {jobs.py:2562} INFO - Task exited with return code 1

@@ -1,0 +1,27 @@
+[2019-05-01 16:46:13,433] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.8.Generate_Report.hash 2019-05-01T20:44:34.818844+00:00 [queued]>
+[2019-05-01 16:46:13,436] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.8.Generate_Report.hash 2019-05-01T20:44:34.818844+00:00 [queued]>
+[2019-05-01 16:46:13,437] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2019-05-01 16:46:13,437] {__init__.py:1354} INFO - Starting attempt 1 of 1
+[2019-05-01 16:46:13,437] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2019-05-01 16:46:13,445] {__init__.py:1374} INFO - Executing <Task(PythonOperator): 8.Generate_Report.hash> on 2019-05-01T20:44:34.818844+00:00
+[2019-05-01 16:46:13,445] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'Salted_Graph_Practice1', '8.Generate_Report.hash', '2019-05-01T20:44:34.818844+00:00', '--job_id', '386', '--raw', '-sd', 'DAGS_FOLDER/salted_graph.py', '--cfg_path', '/tmp/tmpdzt4mv3b']
+[2019-05-01 16:46:13,719] {base_task_runner.py:101} INFO - Job 386: Subtask 8.Generate_Report.hash /home/mjcarleb/anaconda3/envs/airflow5/lib/python3.7/site-packages/airflow/configuration.py:214: FutureWarning: The task_runner setting in [core] has the old default value of 'BashTaskRunner'. This value has been changed to 'StandardTaskRunner' in the running config, but please update your config before Apache Airflow 2.0.
+[2019-05-01 16:46:13,719] {base_task_runner.py:101} INFO - Job 386: Subtask 8.Generate_Report.hash   FutureWarning,
+[2019-05-01 16:46:13,874] {base_task_runner.py:101} INFO - Job 386: Subtask 8.Generate_Report.hash [2019-05-01 16:46:13,874] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-05-01 16:46:14,013] {base_task_runner.py:101} INFO - Job 386: Subtask 8.Generate_Report.hash [2019-05-01 16:46:14,013] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/salted_graph.py
+[2019-05-01 16:46:14,169] {base_task_runner.py:101} INFO - Job 386: Subtask 8.Generate_Report.hash [2019-05-01 16:46:14,169] {cli.py:517} INFO - Running <TaskInstance: Salted_Graph_Practice1.8.Generate_Report.hash 2019-05-01T20:44:34.818844+00:00 [running]> on host localhost.localdomain
+[2019-05-01 16:46:14,174] {python_operator.py:104} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=Salted_Graph_Practice1
+AIRFLOW_CTX_TASK_ID=8.Generate_Report.hash
+AIRFLOW_CTX_EXECUTION_DATE=2019-05-01T20:44:34.818844+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2019-05-01T20:44:34.818844+00:00
+[2019-05-01 16:46:14,238] {logging_mixin.py:95} WARNING - /home/mjcarleb/anaconda3/envs/airflow5/lib/python3.7/site-packages/pyarrow/pandas_compat.py:708: FutureWarning: .labels was deprecated in version 0.24.0. Use .codes instead.
+  labels = getattr(columns, 'labels', None) or [
+[2019-05-01 16:46:14,238] {logging_mixin.py:95} WARNING - /home/mjcarleb/anaconda3/envs/airflow5/lib/python3.7/site-packages/pyarrow/pandas_compat.py:735: FutureWarning: the 'labels' keyword is deprecated, use 'codes' instead
+  return pd.MultiIndex(levels=new_levels, labels=labels, names=columns.names)
+[2019-05-01 16:46:14,239] {logging_mixin.py:95} WARNING - /home/mjcarleb/anaconda3/envs/airflow5/lib/python3.7/site-packages/pyarrow/pandas_compat.py:752: FutureWarning: .labels was deprecated in version 0.24.0. Use .codes instead.
+  labels, = index.labels
+[2019-05-01 16:46:14,247] {python_operator.py:113} INFO - Done. Returned value was: Generated report with hash = 33d21bb1
+[2019-05-01 16:46:18,454] {logging_mixin.py:95} INFO - [2019-05-01 16:46:18,453] {jobs.py:2562} INFO - Task exited with return code 0

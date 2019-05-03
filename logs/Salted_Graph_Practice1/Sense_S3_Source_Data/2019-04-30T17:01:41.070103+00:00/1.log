@@ -1,0 +1,18 @@
+[2019-04-30 13:01:45,806] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.Sense_S3_Source_Data 2019-04-30T17:01:41.070103+00:00 [queued]>
+[2019-04-30 13:01:45,808] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.Sense_S3_Source_Data 2019-04-30T17:01:41.070103+00:00 [queued]>
+[2019-04-30 13:01:45,809] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2019-04-30 13:01:45,809] {__init__.py:1354} INFO - Starting attempt 1 of 1
+[2019-04-30 13:01:45,809] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2019-04-30 13:01:45,817] {__init__.py:1374} INFO - Executing <Task(S3KeySensor): Sense_S3_Source_Data> on 2019-04-30T17:01:41.070103+00:00
+[2019-04-30 13:01:45,817] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'Salted_Graph_Practice1', 'Sense_S3_Source_Data', '2019-04-30T17:01:41.070103+00:00', '--job_id', '179', '--raw', '-sd', 'DAGS_FOLDER/salted_graph.py', '--cfg_path', '/tmp/tmp1ek4f9ov']
+[2019-04-30 13:01:46,080] {base_task_runner.py:101} INFO - Job 179: Subtask Sense_S3_Source_Data /home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/configuration.py:214: FutureWarning: The task_runner setting in [core] has the old default value of 'BashTaskRunner'. This value has been changed to 'StandardTaskRunner' in the running config, but please update your config before Apache Airflow 2.0.
+[2019-04-30 13:01:46,081] {base_task_runner.py:101} INFO - Job 179: Subtask Sense_S3_Source_Data   FutureWarning,
+[2019-04-30 13:01:46,228] {base_task_runner.py:101} INFO - Job 179: Subtask Sense_S3_Source_Data [2019-04-30 13:01:46,227] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-04-30 13:01:46,364] {base_task_runner.py:101} INFO - Job 179: Subtask Sense_S3_Source_Data [2019-04-30 13:01:46,364] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/salted_graph.py
+[2019-04-30 13:01:46,502] {base_task_runner.py:101} INFO - Job 179: Subtask Sense_S3_Source_Data [2019-04-30 13:01:46,502] {cli.py:517} INFO - Running <TaskInstance: Salted_Graph_Practice1.Sense_S3_Source_Data 2019-04-30T17:01:41.070103+00:00 [running]> on host localhost.localdomain
+[2019-04-30 13:01:46,560] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/yelp_subset_1.csv
+[2019-04-30 13:01:46,576] {logging_mixin.py:95} INFO - [2019-04-30 13:01:46,576] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-30 13:01:47,216] {base_sensor_operator.py:124} INFO - Success criteria met. Exiting.
+[2019-04-30 13:01:50,819] {logging_mixin.py:95} INFO - [2019-04-30 13:01:50,819] {jobs.py:2562} INFO - Task exited with return code 0

@@ -1,0 +1,51 @@
+[2019-04-30 13:12:14,514] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.Sense_S3_Source_Data 2019-04-30T17:12:12.892934+00:00 [queued]>
+[2019-04-30 13:12:14,517] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.Sense_S3_Source_Data 2019-04-30T17:12:12.892934+00:00 [queued]>
+[2019-04-30 13:12:14,517] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2019-04-30 13:12:14,517] {__init__.py:1354} INFO - Starting attempt 1 of 1
+[2019-04-30 13:12:14,517] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2019-04-30 13:12:14,525] {__init__.py:1374} INFO - Executing <Task(S3KeySensor): Sense_S3_Source_Data> on 2019-04-30T17:12:12.892934+00:00
+[2019-04-30 13:12:14,525] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'Salted_Graph_Practice1', 'Sense_S3_Source_Data', '2019-04-30T17:12:12.892934+00:00', '--job_id', '183', '--raw', '-sd', 'DAGS_FOLDER/salted_graph.py', '--cfg_path', '/tmp/tmpw8y94s9d']
+[2019-04-30 13:12:14,804] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data /home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/configuration.py:214: FutureWarning: The task_runner setting in [core] has the old default value of 'BashTaskRunner'. This value has been changed to 'StandardTaskRunner' in the running config, but please update your config before Apache Airflow 2.0.
+[2019-04-30 13:12:14,804] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data   FutureWarning,
+[2019-04-30 13:12:14,955] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data [2019-04-30 13:12:14,955] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-04-30 13:12:15,096] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data [2019-04-30 13:12:15,096] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/salted_graph.py
+[2019-04-30 13:12:15,235] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data [2019-04-30 13:12:15,234] {cli.py:517} INFO - Running <TaskInstance: Salted_Graph_Practice1.Sense_S3_Source_Data 2019-04-30T17:12:12.892934+00:00 [running]> on host localhost.localdomain
+[2019-04-30 13:12:15,292] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/yeld_subset_1.csv
+[2019-04-30 13:12:15,308] {logging_mixin.py:95} INFO - [2019-04-30 13:12:15,308] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-30 13:12:15,621] {logging_mixin.py:95} INFO - [2019-04-30 13:12:15,621] {S3_hook.py:201} INFO - Not Found
+[2019-04-30 13:12:25,633] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/yeld_subset_1.csv
+[2019-04-30 13:12:25,662] {logging_mixin.py:95} INFO - [2019-04-30 13:12:25,662] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-30 13:12:25,978] {logging_mixin.py:95} INFO - [2019-04-30 13:12:25,978] {S3_hook.py:201} INFO - Not Found
+[2019-04-30 13:12:35,991] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/yeld_subset_1.csv
+[2019-04-30 13:12:36,004] {logging_mixin.py:95} INFO - [2019-04-30 13:12:36,004] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-30 13:12:36,325] {logging_mixin.py:95} INFO - [2019-04-30 13:12:36,325] {S3_hook.py:201} INFO - Not Found
+[2019-04-30 13:12:46,328] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/yeld_subset_1.csv
+[2019-04-30 13:12:46,371] {logging_mixin.py:95} INFO - [2019-04-30 13:12:46,370] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-30 13:12:46,644] {logging_mixin.py:95} INFO - [2019-04-30 13:12:46,644] {S3_hook.py:201} INFO - Not Found
+[2019-04-30 13:12:46,647] {__init__.py:1580} ERROR - Snap. Time is OUT.
+Traceback (most recent call last):
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 1441, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/sensors/base_sensor_operator.py", line 117, in execute
+    raise AirflowSensorTimeout('Snap. Time is OUT.')
+airflow.exceptions.AirflowSensorTimeout: Snap. Time is OUT.
+[2019-04-30 13:12:46,648] {__init__.py:1611} INFO - Marking task as FAILED.
+[2019-04-30 13:12:46,662] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data Traceback (most recent call last):
+[2019-04-30 13:12:46,662] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data   File "/home/mjcarleb/anaconda3/envs/airflow4/bin/airflow", line 32, in <module>
+[2019-04-30 13:12:46,662] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data     args.func(args)
+[2019-04-30 13:12:46,662] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/utils/cli.py", line 74, in wrapper
+[2019-04-30 13:12:46,662] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data     return f(*args, **kwargs)
+[2019-04-30 13:12:46,662] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/bin/cli.py", line 523, in run
+[2019-04-30 13:12:46,662] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data     _run(args, dag, ti)
+[2019-04-30 13:12:46,662] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/bin/cli.py", line 442, in _run
+[2019-04-30 13:12:46,662] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data     pool=args.pool,
+[2019-04-30 13:12:46,662] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/utils/db.py", line 73, in wrapper
+[2019-04-30 13:12:46,662] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data     return func(*args, **kwargs)
+[2019-04-30 13:12:46,662] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 1441, in _run_raw_task
+[2019-04-30 13:12:46,662] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data     result = task_copy.execute(context=context)
+[2019-04-30 13:12:46,662] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/sensors/base_sensor_operator.py", line 117, in execute
+[2019-04-30 13:12:46,662] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data     raise AirflowSensorTimeout('Snap. Time is OUT.')
+[2019-04-30 13:12:46,662] {base_task_runner.py:101} INFO - Job 183: Subtask Sense_S3_Source_Data airflow.exceptions.AirflowSensorTimeout: Snap. Time is OUT.
+[2019-04-30 13:12:49,586] {logging_mixin.py:95} INFO - [2019-04-30 13:12:49,586] {jobs.py:2562} INFO - Task exited with return code 1

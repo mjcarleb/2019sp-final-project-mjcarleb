@@ -1,0 +1,85 @@
+[2019-04-29 20:00:01,452] {jobs.py:398} INFO - Started process (PID=10477) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:00:01,454] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py for tasks to queue
+[2019-04-29 20:00:01,454] {logging_mixin.py:95} INFO - [2019-04-29 20:00:01,454] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:00:01,454] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:00:01,455] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py took 0.003 seconds
+[2019-04-29 20:00:15,479] {jobs.py:398} INFO - Started process (PID=11459) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:00:15,481] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py for tasks to queue
+[2019-04-29 20:00:15,482] {logging_mixin.py:95} INFO - [2019-04-29 20:00:15,481] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:00:15,482] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:00:15,482] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py took 0.003 seconds
+[2019-04-29 20:00:29,479] {jobs.py:398} INFO - Started process (PID=12496) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:00:29,481] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py for tasks to queue
+[2019-04-29 20:00:29,481] {logging_mixin.py:95} INFO - [2019-04-29 20:00:29,481] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:00:29,482] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:00:29,482] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py took 0.003 seconds
+[2019-04-29 20:00:43,490] {jobs.py:398} INFO - Started process (PID=13451) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:00:43,492] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py for tasks to queue
+[2019-04-29 20:00:43,492] {logging_mixin.py:95} INFO - [2019-04-29 20:00:43,492] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:00:43,492] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:00:43,493] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py took 0.002 seconds
+[2019-04-29 20:00:57,508] {jobs.py:398} INFO - Started process (PID=14283) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:00:57,509] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py for tasks to queue
+[2019-04-29 20:00:57,509] {logging_mixin.py:95} INFO - [2019-04-29 20:00:57,509] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:00:57,510] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:00:57,510] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py took 0.002 seconds
+[2019-04-29 20:01:11,524] {jobs.py:398} INFO - Started process (PID=15046) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:01:11,527] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py for tasks to queue
+[2019-04-29 20:01:11,527] {logging_mixin.py:95} INFO - [2019-04-29 20:01:11,527] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:01:11,527] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:01:11,528] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py took 0.004 seconds
+[2019-04-29 20:01:25,535] {jobs.py:398} INFO - Started process (PID=15984) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:01:25,537] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py for tasks to queue
+[2019-04-29 20:01:25,537] {logging_mixin.py:95} INFO - [2019-04-29 20:01:25,537] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:01:25,537] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:01:25,538] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py took 0.003 seconds
+[2019-04-29 20:01:39,549] {jobs.py:398} INFO - Started process (PID=16696) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:01:39,550] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py for tasks to queue
+[2019-04-29 20:01:39,551] {logging_mixin.py:95} INFO - [2019-04-29 20:01:39,550] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:01:39,551] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:01:39,551] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py took 0.002 seconds
+[2019-04-29 20:01:53,562] {jobs.py:398} INFO - Started process (PID=17337) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:01:53,563] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py for tasks to queue
+[2019-04-29 20:01:53,563] {logging_mixin.py:95} INFO - [2019-04-29 20:01:53,563] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:01:53,564] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:01:53,564] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py took 0.002 seconds
+[2019-04-29 20:02:07,567] {jobs.py:398} INFO - Started process (PID=18348) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:02:07,569] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py for tasks to queue
+[2019-04-29 20:02:07,569] {logging_mixin.py:95} INFO - [2019-04-29 20:02:07,569] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:02:07,569] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:02:07,569] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py took 0.002 seconds
+[2019-04-29 20:02:21,587] {jobs.py:398} INFO - Started process (PID=19260) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:02:21,589] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py for tasks to queue
+[2019-04-29 20:02:21,589] {logging_mixin.py:95} INFO - [2019-04-29 20:02:21,589] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:02:21,589] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:02:21,589] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py took 0.002 seconds
+[2019-04-29 20:02:35,594] {jobs.py:398} INFO - Started process (PID=20310) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:02:35,595] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py for tasks to queue
+[2019-04-29 20:02:35,595] {logging_mixin.py:95} INFO - [2019-04-29 20:02:35,595] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:02:35,596] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:02:35,596] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py took 0.003 seconds
+[2019-04-29 20:02:49,606] {jobs.py:398} INFO - Started process (PID=21292) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:02:49,608] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py for tasks to queue
+[2019-04-29 20:02:49,608] {logging_mixin.py:95} INFO - [2019-04-29 20:02:49,608] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:02:49,609] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:02:49,609] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py took 0.003 seconds
+[2019-04-29 20:03:03,620] {jobs.py:398} INFO - Started process (PID=22089) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:03:03,622] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py for tasks to queue
+[2019-04-29 20:03:03,622] {logging_mixin.py:95} INFO - [2019-04-29 20:03:03,622] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:03:03,622] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:03:03,623] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py took 0.003 seconds
+[2019-04-29 20:03:17,645] {jobs.py:398} INFO - Started process (PID=22964) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:03:17,653] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py for tasks to queue
+[2019-04-29 20:03:17,654] {logging_mixin.py:95} INFO - [2019-04-29 20:03:17,654] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:03:17,655] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:03:17,656] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py took 0.011 seconds
+[2019-04-29 20:03:31,640] {jobs.py:398} INFO - Started process (PID=23772) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:03:31,642] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py for tasks to queue
+[2019-04-29 20:03:31,642] {logging_mixin.py:95} INFO - [2019-04-29 20:03:31,642] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:03:31,642] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:03:31,643] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py took 0.003 seconds
+[2019-04-29 20:03:45,681] {jobs.py:398} INFO - Started process (PID=24506) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:03:45,687] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py for tasks to queue
+[2019-04-29 20:03:45,688] {logging_mixin.py:95} INFO - [2019-04-29 20:03:45,688] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:03:45,689] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 20:03:45,691] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py took 0.010 seconds

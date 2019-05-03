@@ -1,0 +1,22 @@
+[2019-04-29 15:58:31,539] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: demo_XCOM9.t_pull_via_key 2019-04-28T00:00:00+00:00 [queued]>
+[2019-04-29 15:58:31,542] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: demo_XCOM9.t_pull_via_key 2019-04-28T00:00:00+00:00 [queued]>
+[2019-04-29 15:58:31,542] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2019-04-29 15:58:31,543] {__init__.py:1354} INFO - Starting attempt 1 of 1
+[2019-04-29 15:58:31,543] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2019-04-29 15:58:31,553] {__init__.py:1374} INFO - Executing <Task(PythonOperator): t_pull_via_key> on 2019-04-28T00:00:00+00:00
+[2019-04-29 15:58:31,553] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'demo_XCOM9', 't_pull_via_key', '2019-04-28T00:00:00+00:00', '--job_id', '190', '--raw', '-sd', 'DAGS_FOLDER/XCOM_challenge.py', '--cfg_path', '/tmp/tmpdx90q9f6']
+[2019-04-29 15:58:31,856] {base_task_runner.py:101} INFO - Job 190: Subtask t_pull_via_key /home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/configuration.py:214: FutureWarning: The task_runner setting in [core] has the old default value of 'BashTaskRunner'. This value has been changed to 'StandardTaskRunner' in the running config, but please update your config before Apache Airflow 2.0.
+[2019-04-29 15:58:31,856] {base_task_runner.py:101} INFO - Job 190: Subtask t_pull_via_key   FutureWarning,
+[2019-04-29 15:58:32,003] {base_task_runner.py:101} INFO - Job 190: Subtask t_pull_via_key [2019-04-29 15:58:32,003] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-04-29 15:58:32,143] {base_task_runner.py:101} INFO - Job 190: Subtask t_pull_via_key [2019-04-29 15:58:32,143] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 15:58:32,278] {base_task_runner.py:101} INFO - Job 190: Subtask t_pull_via_key [2019-04-29 15:58:32,278] {cli.py:517} INFO - Running <TaskInstance: demo_XCOM9.t_pull_via_key 2019-04-28T00:00:00+00:00 [running]> on host localhost.localdomain
+[2019-04-29 15:58:32,284] {python_operator.py:104} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=demo_XCOM9
+AIRFLOW_CTX_TASK_ID=t_pull_via_key
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-28T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-28T00:00:00+00:00
+[2019-04-29 15:58:32,285] {logging_mixin.py:95} INFO - Value pulled via XCOM pull by key (20?) = 20
+[2019-04-29 15:58:32,285] {python_operator.py:113} INFO - Done. Returned value was: Finished pull via key
+[2019-04-29 15:58:36,548] {logging_mixin.py:95} INFO - [2019-04-29 15:58:36,548] {jobs.py:2562} INFO - Task exited with return code 0

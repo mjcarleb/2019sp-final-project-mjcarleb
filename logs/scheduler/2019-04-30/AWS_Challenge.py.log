@@ -1,0 +1,85 @@
+[2019-04-29 20:00:05,456] {jobs.py:398} INFO - Started process (PID=10762) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:00:05,457] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py for tasks to queue
+[2019-04-29 20:00:05,457] {logging_mixin.py:95} INFO - [2019-04-29 20:00:05,457] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:00:05,458] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:00:05,458] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py took 0.002 seconds
+[2019-04-29 20:00:19,469] {jobs.py:398} INFO - Started process (PID=11754) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:00:19,471] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py for tasks to queue
+[2019-04-29 20:00:19,471] {logging_mixin.py:95} INFO - [2019-04-29 20:00:19,471] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:00:19,471] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:00:19,472] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py took 0.002 seconds
+[2019-04-29 20:00:33,482] {jobs.py:398} INFO - Started process (PID=12767) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:00:33,484] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py for tasks to queue
+[2019-04-29 20:00:33,484] {logging_mixin.py:95} INFO - [2019-04-29 20:00:33,484] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:00:33,484] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:00:33,485] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py took 0.002 seconds
+[2019-04-29 20:00:47,495] {jobs.py:398} INFO - Started process (PID=13641) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:00:47,496] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py for tasks to queue
+[2019-04-29 20:00:47,497] {logging_mixin.py:95} INFO - [2019-04-29 20:00:47,497] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:00:47,497] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:00:47,497] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py took 0.003 seconds
+[2019-04-29 20:01:01,513] {jobs.py:398} INFO - Started process (PID=14529) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:01:01,516] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py for tasks to queue
+[2019-04-29 20:01:01,516] {logging_mixin.py:95} INFO - [2019-04-29 20:01:01,516] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:01:01,516] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:01:01,517] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py took 0.003 seconds
+[2019-04-29 20:01:15,524] {jobs.py:398} INFO - Started process (PID=15275) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:01:15,526] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py for tasks to queue
+[2019-04-29 20:01:15,526] {logging_mixin.py:95} INFO - [2019-04-29 20:01:15,526] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:01:15,526] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:01:15,526] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py took 0.003 seconds
+[2019-04-29 20:01:29,539] {jobs.py:398} INFO - Started process (PID=16209) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:01:29,540] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py for tasks to queue
+[2019-04-29 20:01:29,541] {logging_mixin.py:95} INFO - [2019-04-29 20:01:29,540] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:01:29,541] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:01:29,541] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py took 0.002 seconds
+[2019-04-29 20:01:43,553] {jobs.py:398} INFO - Started process (PID=16895) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:01:43,554] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py for tasks to queue
+[2019-04-29 20:01:43,555] {logging_mixin.py:95} INFO - [2019-04-29 20:01:43,555] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:01:43,555] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:01:43,555] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py took 0.002 seconds
+[2019-04-29 20:01:57,561] {jobs.py:398} INFO - Started process (PID=17629) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:01:57,563] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py for tasks to queue
+[2019-04-29 20:01:57,563] {logging_mixin.py:95} INFO - [2019-04-29 20:01:57,563] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:01:57,563] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:01:57,564] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py took 0.002 seconds
+[2019-04-29 20:02:11,574] {jobs.py:398} INFO - Started process (PID=18641) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:02:11,576] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py for tasks to queue
+[2019-04-29 20:02:11,576] {logging_mixin.py:95} INFO - [2019-04-29 20:02:11,576] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:02:11,576] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:02:11,577] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py took 0.003 seconds
+[2019-04-29 20:02:25,585] {jobs.py:398} INFO - Started process (PID=19486) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:02:25,587] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py for tasks to queue
+[2019-04-29 20:02:25,588] {logging_mixin.py:95} INFO - [2019-04-29 20:02:25,588] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:02:25,588] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:02:25,588] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py took 0.003 seconds
+[2019-04-29 20:02:39,597] {jobs.py:398} INFO - Started process (PID=20665) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:02:39,599] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py for tasks to queue
+[2019-04-29 20:02:39,599] {logging_mixin.py:95} INFO - [2019-04-29 20:02:39,599] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:02:39,599] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:02:39,600] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py took 0.003 seconds
+[2019-04-29 20:02:53,615] {jobs.py:398} INFO - Started process (PID=21530) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:02:53,617] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py for tasks to queue
+[2019-04-29 20:02:53,617] {logging_mixin.py:95} INFO - [2019-04-29 20:02:53,617] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:02:53,617] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:02:53,618] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py took 0.002 seconds
+[2019-04-29 20:03:07,619] {jobs.py:398} INFO - Started process (PID=22295) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:03:07,620] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py for tasks to queue
+[2019-04-29 20:03:07,621] {logging_mixin.py:95} INFO - [2019-04-29 20:03:07,621] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:03:07,621] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:03:07,621] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py took 0.002 seconds
+[2019-04-29 20:03:21,629] {jobs.py:398} INFO - Started process (PID=23215) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:03:21,632] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py for tasks to queue
+[2019-04-29 20:03:21,632] {logging_mixin.py:95} INFO - [2019-04-29 20:03:21,632] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:03:21,632] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:03:21,633] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py took 0.003 seconds
+[2019-04-29 20:03:35,658] {jobs.py:398} INFO - Started process (PID=23956) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:03:35,665] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py for tasks to queue
+[2019-04-29 20:03:35,665] {logging_mixin.py:95} INFO - [2019-04-29 20:03:35,665] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:03:35,667] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:03:35,668] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py took 0.010 seconds
+[2019-04-29 20:03:49,654] {jobs.py:398} INFO - Started process (PID=24646) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:03:49,657] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py for tasks to queue
+[2019-04-29 20:03:49,657] {logging_mixin.py:95} INFO - [2019-04-29 20:03:49,657] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:03:49,658] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 20:03:49,658] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py took 0.004 seconds

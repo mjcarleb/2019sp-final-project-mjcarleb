@@ -1,0 +1,23 @@
+[2019-05-01 16:46:02,426] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.7.Generate_Transform.hash 2019-05-01T20:44:34.818844+00:00 [queued]>
+[2019-05-01 16:46:02,430] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.7.Generate_Transform.hash 2019-05-01T20:44:34.818844+00:00 [queued]>
+[2019-05-01 16:46:02,430] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2019-05-01 16:46:02,430] {__init__.py:1354} INFO - Starting attempt 1 of 1
+[2019-05-01 16:46:02,430] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2019-05-01 16:46:02,438] {__init__.py:1374} INFO - Executing <Task(PythonOperator): 7.Generate_Transform.hash> on 2019-05-01T20:44:34.818844+00:00
+[2019-05-01 16:46:02,438] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'Salted_Graph_Practice1', '7.Generate_Transform.hash', '2019-05-01T20:44:34.818844+00:00', '--job_id', '385', '--raw', '-sd', 'DAGS_FOLDER/salted_graph.py', '--cfg_path', '/tmp/tmpazyczp06']
+[2019-05-01 16:46:02,703] {base_task_runner.py:101} INFO - Job 385: Subtask 7.Generate_Transform.hash /home/mjcarleb/anaconda3/envs/airflow5/lib/python3.7/site-packages/airflow/configuration.py:214: FutureWarning: The task_runner setting in [core] has the old default value of 'BashTaskRunner'. This value has been changed to 'StandardTaskRunner' in the running config, but please update your config before Apache Airflow 2.0.
+[2019-05-01 16:46:02,703] {base_task_runner.py:101} INFO - Job 385: Subtask 7.Generate_Transform.hash   FutureWarning,
+[2019-05-01 16:46:02,857] {base_task_runner.py:101} INFO - Job 385: Subtask 7.Generate_Transform.hash [2019-05-01 16:46:02,856] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-05-01 16:46:03,001] {base_task_runner.py:101} INFO - Job 385: Subtask 7.Generate_Transform.hash [2019-05-01 16:46:03,001] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/salted_graph.py
+[2019-05-01 16:46:03,141] {base_task_runner.py:101} INFO - Job 385: Subtask 7.Generate_Transform.hash [2019-05-01 16:46:03,140] {cli.py:517} INFO - Running <TaskInstance: Salted_Graph_Practice1.7.Generate_Transform.hash 2019-05-01T20:44:34.818844+00:00 [running]> on host localhost.localdomain
+[2019-05-01 16:46:03,146] {python_operator.py:104} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=Salted_Graph_Practice1
+AIRFLOW_CTX_TASK_ID=7.Generate_Transform.hash
+AIRFLOW_CTX_EXECUTION_DATE=2019-05-01T20:44:34.818844+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2019-05-01T20:44:34.818844+00:00
+[2019-05-01 16:46:03,260] {logging_mixin.py:95} WARNING - /home/mjcarleb/anaconda3/envs/airflow5/lib/python3.7/site-packages/pyarrow/pandas_compat.py:114: FutureWarning: A future version of pandas will default to `skipna=True`. To silence this warning, pass `skipna=True|False` explicitly.
+  result = infer_dtype(pandas_collection)
+[2019-05-01 16:46:03,294] {python_operator.py:113} INFO - Done. Returned value was: Transformed copied data with hash = 33d21bb1
+[2019-05-01 16:46:07,440] {logging_mixin.py:95} INFO - [2019-05-01 16:46:07,439] {jobs.py:2562} INFO - Task exited with return code 0

@@ -1,0 +1,80 @@
+[2019-04-29 20:00:11,465] {jobs.py:398} INFO - Started process (PID=11178) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:00:11,466] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py for tasks to queue
+[2019-04-29 20:00:11,466] {logging_mixin.py:95} INFO - [2019-04-29 20:00:11,466] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:00:11,467] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:00:11,467] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py took 0.002 seconds
+[2019-04-29 20:00:25,478] {jobs.py:398} INFO - Started process (PID=12217) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:00:25,481] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py for tasks to queue
+[2019-04-29 20:00:25,481] {logging_mixin.py:95} INFO - [2019-04-29 20:00:25,481] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:00:25,481] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:00:25,482] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py took 0.003 seconds
+[2019-04-29 20:00:39,487] {jobs.py:398} INFO - Started process (PID=13178) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:00:39,489] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py for tasks to queue
+[2019-04-29 20:00:39,489] {logging_mixin.py:95} INFO - [2019-04-29 20:00:39,489] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:00:39,489] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:00:39,490] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py took 0.003 seconds
+[2019-04-29 20:00:53,502] {jobs.py:398} INFO - Started process (PID=14011) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:00:53,504] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py for tasks to queue
+[2019-04-29 20:00:53,504] {logging_mixin.py:95} INFO - [2019-04-29 20:00:53,504] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:00:53,505] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:00:53,505] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py took 0.003 seconds
+[2019-04-29 20:01:07,517] {jobs.py:398} INFO - Started process (PID=14821) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:01:07,518] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py for tasks to queue
+[2019-04-29 20:01:07,519] {logging_mixin.py:95} INFO - [2019-04-29 20:01:07,518] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:01:07,519] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:01:07,519] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py took 0.002 seconds
+[2019-04-29 20:01:21,533] {jobs.py:398} INFO - Started process (PID=15599) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:01:21,535] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py for tasks to queue
+[2019-04-29 20:01:21,535] {logging_mixin.py:95} INFO - [2019-04-29 20:01:21,535] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:01:21,536] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:01:21,536] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py took 0.003 seconds
+[2019-04-29 20:01:35,545] {jobs.py:398} INFO - Started process (PID=16545) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:01:35,546] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py for tasks to queue
+[2019-04-29 20:01:35,546] {logging_mixin.py:95} INFO - [2019-04-29 20:01:35,546] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:01:35,547] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:01:35,547] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py took 0.002 seconds
+[2019-04-29 20:01:49,573] {jobs.py:398} INFO - Started process (PID=17129) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:01:49,575] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py for tasks to queue
+[2019-04-29 20:01:49,575] {logging_mixin.py:95} INFO - [2019-04-29 20:01:49,575] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:01:49,575] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:01:49,576] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py took 0.003 seconds
+[2019-04-29 20:02:03,565] {jobs.py:398} INFO - Started process (PID=18069) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:02:03,567] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py for tasks to queue
+[2019-04-29 20:02:03,567] {logging_mixin.py:95} INFO - [2019-04-29 20:02:03,567] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:02:03,568] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:02:03,568] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py took 0.003 seconds
+[2019-04-29 20:02:17,584] {jobs.py:398} INFO - Started process (PID=19017) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:02:17,586] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py for tasks to queue
+[2019-04-29 20:02:17,586] {logging_mixin.py:95} INFO - [2019-04-29 20:02:17,586] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:02:17,586] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:02:17,587] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py took 0.003 seconds
+[2019-04-29 20:02:31,611] {jobs.py:398} INFO - Started process (PID=19897) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:02:31,613] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py for tasks to queue
+[2019-04-29 20:02:31,613] {logging_mixin.py:95} INFO - [2019-04-29 20:02:31,613] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:02:31,613] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:02:31,614] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py took 0.003 seconds
+[2019-04-29 20:02:45,599] {jobs.py:398} INFO - Started process (PID=21129) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:02:45,600] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py for tasks to queue
+[2019-04-29 20:02:45,600] {logging_mixin.py:95} INFO - [2019-04-29 20:02:45,600] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:02:45,601] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:02:45,601] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py took 0.002 seconds
+[2019-04-29 20:02:59,614] {jobs.py:398} INFO - Started process (PID=21857) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:02:59,617] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py for tasks to queue
+[2019-04-29 20:02:59,617] {logging_mixin.py:95} INFO - [2019-04-29 20:02:59,617] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:02:59,617] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:02:59,618] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py took 0.003 seconds
+[2019-04-29 20:03:13,626] {jobs.py:398} INFO - Started process (PID=22703) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:03:13,628] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py for tasks to queue
+[2019-04-29 20:03:13,628] {logging_mixin.py:95} INFO - [2019-04-29 20:03:13,628] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:03:13,629] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:03:13,629] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py took 0.003 seconds
+[2019-04-29 20:03:27,633] {jobs.py:398} INFO - Started process (PID=23573) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:03:27,635] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py for tasks to queue
+[2019-04-29 20:03:27,635] {logging_mixin.py:95} INFO - [2019-04-29 20:03:27,635] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:03:27,636] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:03:27,636] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py took 0.003 seconds
+[2019-04-29 20:03:41,663] {jobs.py:398} INFO - Started process (PID=24259) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:03:41,669] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py for tasks to queue
+[2019-04-29 20:03:41,670] {logging_mixin.py:95} INFO - [2019-04-29 20:03:41,670] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:03:41,671] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py
+[2019-04-29 20:03:41,672] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/S3_Read_Yelp_into_df.py took 0.009 seconds

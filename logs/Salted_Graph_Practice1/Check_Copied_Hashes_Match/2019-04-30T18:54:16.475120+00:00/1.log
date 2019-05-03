@@ -1,0 +1,23 @@
+[2019-04-30 14:54:41,632] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.Check_Copied_Hashes_Match 2019-04-30T18:54:16.475120+00:00 [queued]>
+[2019-04-30 14:54:41,635] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.Check_Copied_Hashes_Match 2019-04-30T18:54:16.475120+00:00 [queued]>
+[2019-04-30 14:54:41,635] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2019-04-30 14:54:41,635] {__init__.py:1354} INFO - Starting attempt 1 of 1
+[2019-04-30 14:54:41,635] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2019-04-30 14:54:41,643] {__init__.py:1374} INFO - Executing <Task(PythonOperator): Check_Copied_Hashes_Match> on 2019-04-30T18:54:16.475120+00:00
+[2019-04-30 14:54:41,644] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'Salted_Graph_Practice1', 'Check_Copied_Hashes_Match', '2019-04-30T18:54:16.475120+00:00', '--job_id', '205', '--raw', '-sd', 'DAGS_FOLDER/salted_graph.py', '--cfg_path', '/tmp/tmppq20igiw']
+[2019-04-30 14:54:41,916] {base_task_runner.py:101} INFO - Job 205: Subtask Check_Copied_Hashes_Match /home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/configuration.py:214: FutureWarning: The task_runner setting in [core] has the old default value of 'BashTaskRunner'. This value has been changed to 'StandardTaskRunner' in the running config, but please update your config before Apache Airflow 2.0.
+[2019-04-30 14:54:41,916] {base_task_runner.py:101} INFO - Job 205: Subtask Check_Copied_Hashes_Match   FutureWarning,
+[2019-04-30 14:54:42,061] {base_task_runner.py:101} INFO - Job 205: Subtask Check_Copied_Hashes_Match [2019-04-30 14:54:42,061] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-04-30 14:54:42,198] {base_task_runner.py:101} INFO - Job 205: Subtask Check_Copied_Hashes_Match [2019-04-30 14:54:42,198] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/salted_graph.py
+[2019-04-30 14:54:42,218] {base_task_runner.py:101} INFO - Job 205: Subtask Check_Copied_Hashes_Match [2019-04-30 14:54:42,218] {cli.py:517} INFO - Running <TaskInstance: Salted_Graph_Practice1.Check_Copied_Hashes_Match 2019-04-30T18:54:16.475120+00:00 [running]> on host localhost.localdomain
+[2019-04-30 14:54:42,223] {python_operator.py:104} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=Salted_Graph_Practice1
+AIRFLOW_CTX_TASK_ID=Check_Copied_Hashes_Match
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-30T18:54:16.475120+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2019-04-30T18:54:16.475120+00:00
+[2019-04-30 14:54:42,343] {logging_mixin.py:95} INFO - Here is copied_hash_past = None
+[2019-04-30 14:54:42,343] {logging_mixin.py:95} INFO - caught copied_hash_past being None (good)!!!!!!
+[2019-04-30 14:54:42,343] {python_operator.py:113} INFO - Done. Returned value was: re_do_copy=True & re_do_report=True
+[2019-04-30 14:54:46,639] {logging_mixin.py:95} INFO - [2019-04-30 14:54:46,639] {jobs.py:2562} INFO - Task exited with return code 0

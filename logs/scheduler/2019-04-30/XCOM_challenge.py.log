@@ -1,0 +1,85 @@
+[2019-04-29 20:00:03,453] {jobs.py:398} INFO - Started process (PID=10612) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:00:03,455] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py for tasks to queue
+[2019-04-29 20:00:03,455] {logging_mixin.py:95} INFO - [2019-04-29 20:00:03,455] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:00:03,455] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:00:03,456] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py took 0.002 seconds
+[2019-04-29 20:00:17,467] {jobs.py:398} INFO - Started process (PID=11596) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:00:17,469] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py for tasks to queue
+[2019-04-29 20:00:17,469] {logging_mixin.py:95} INFO - [2019-04-29 20:00:17,469] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:00:17,469] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:00:17,470] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py took 0.002 seconds
+[2019-04-29 20:00:31,486] {jobs.py:398} INFO - Started process (PID=12626) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:00:31,487] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py for tasks to queue
+[2019-04-29 20:00:31,487] {logging_mixin.py:95} INFO - [2019-04-29 20:00:31,487] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:00:31,488] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:00:31,488] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py took 0.002 seconds
+[2019-04-29 20:00:45,496] {jobs.py:398} INFO - Started process (PID=13553) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:00:45,498] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py for tasks to queue
+[2019-04-29 20:00:45,498] {logging_mixin.py:95} INFO - [2019-04-29 20:00:45,498] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:00:45,498] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:00:45,499] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py took 0.002 seconds
+[2019-04-29 20:00:59,523] {jobs.py:398} INFO - Started process (PID=14387) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:00:59,529] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py for tasks to queue
+[2019-04-29 20:00:59,530] {logging_mixin.py:95} INFO - [2019-04-29 20:00:59,530] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:00:59,532] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:00:59,533] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py took 0.010 seconds
+[2019-04-29 20:01:13,524] {jobs.py:398} INFO - Started process (PID=15161) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:01:13,526] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py for tasks to queue
+[2019-04-29 20:01:13,527] {logging_mixin.py:95} INFO - [2019-04-29 20:01:13,527] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:01:13,527] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:01:13,527] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py took 0.003 seconds
+[2019-04-29 20:01:27,537] {jobs.py:398} INFO - Started process (PID=16100) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:01:27,538] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py for tasks to queue
+[2019-04-29 20:01:27,539] {logging_mixin.py:95} INFO - [2019-04-29 20:01:27,538] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:01:27,539] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:01:27,539] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py took 0.002 seconds
+[2019-04-29 20:01:41,555] {jobs.py:398} INFO - Started process (PID=16810) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:01:41,556] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py for tasks to queue
+[2019-04-29 20:01:41,556] {logging_mixin.py:95} INFO - [2019-04-29 20:01:41,556] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:01:41,557] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:01:41,557] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py took 0.002 seconds
+[2019-04-29 20:01:55,560] {jobs.py:398} INFO - Started process (PID=17492) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:01:55,561] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py for tasks to queue
+[2019-04-29 20:01:55,561] {logging_mixin.py:95} INFO - [2019-04-29 20:01:55,561] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:01:55,562] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:01:55,562] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py took 0.002 seconds
+[2019-04-29 20:02:09,570] {jobs.py:398} INFO - Started process (PID=18498) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:02:09,572] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py for tasks to queue
+[2019-04-29 20:02:09,572] {logging_mixin.py:95} INFO - [2019-04-29 20:02:09,572] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:02:09,572] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:02:09,572] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py took 0.002 seconds
+[2019-04-29 20:02:23,583] {jobs.py:398} INFO - Started process (PID=19363) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:02:23,585] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py for tasks to queue
+[2019-04-29 20:02:23,585] {logging_mixin.py:95} INFO - [2019-04-29 20:02:23,585] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:02:23,586] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:02:23,586] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py took 0.003 seconds
+[2019-04-29 20:02:37,595] {jobs.py:398} INFO - Started process (PID=20484) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:02:37,597] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py for tasks to queue
+[2019-04-29 20:02:37,597] {logging_mixin.py:95} INFO - [2019-04-29 20:02:37,597] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:02:37,598] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:02:37,598] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py took 0.003 seconds
+[2019-04-29 20:02:51,608] {jobs.py:398} INFO - Started process (PID=21414) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:02:51,610] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py for tasks to queue
+[2019-04-29 20:02:51,610] {logging_mixin.py:95} INFO - [2019-04-29 20:02:51,610] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:02:51,611] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:02:51,611] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py took 0.003 seconds
+[2019-04-29 20:03:05,629] {jobs.py:398} INFO - Started process (PID=22171) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:03:05,630] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py for tasks to queue
+[2019-04-29 20:03:05,631] {logging_mixin.py:95} INFO - [2019-04-29 20:03:05,631] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:03:05,631] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:03:05,631] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py took 0.003 seconds
+[2019-04-29 20:03:19,628] {jobs.py:398} INFO - Started process (PID=23082) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:03:19,631] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py for tasks to queue
+[2019-04-29 20:03:19,631] {logging_mixin.py:95} INFO - [2019-04-29 20:03:19,631] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:03:19,631] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:03:19,632] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py took 0.003 seconds
+[2019-04-29 20:03:33,663] {jobs.py:398} INFO - Started process (PID=23863) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:03:33,665] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py for tasks to queue
+[2019-04-29 20:03:33,666] {logging_mixin.py:95} INFO - [2019-04-29 20:03:33,666] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:03:33,666] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:03:33,667] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py took 0.004 seconds
+[2019-04-29 20:03:47,660] {jobs.py:398} INFO - Started process (PID=24567) to work on /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:03:47,665] {jobs.py:1711} INFO - Processing file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py for tasks to queue
+[2019-04-29 20:03:47,665] {logging_mixin.py:95} INFO - [2019-04-29 20:03:47,665] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:03:47,666] {jobs.py:1725} WARNING - No viable dags retrieved from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 20:03:47,668] {jobs.py:406} INFO - Processing /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py took 0.007 seconds

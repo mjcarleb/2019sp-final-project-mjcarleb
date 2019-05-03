@@ -1,0 +1,120 @@
+[2019-04-29 07:29:23,442] {models.py:1359} INFO - Dependencies all met for <TaskInstance: s3_file_sensor3.s3_file_test 2019-04-28T00:00:00+00:00 [queued]>
+[2019-04-29 07:29:23,444] {models.py:1359} INFO - Dependencies all met for <TaskInstance: s3_file_sensor3.s3_file_test 2019-04-28T00:00:00+00:00 [queued]>
+[2019-04-29 07:29:23,444] {models.py:1571} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 2 of 2
+--------------------------------------------------------------------------------
+
+[2019-04-29 07:29:23,452] {models.py:1593} INFO - Executing <Task(S3KeySensor): s3_file_test> on 2019-04-28T00:00:00+00:00
+[2019-04-29 07:29:23,452] {base_task_runner.py:118} INFO - Running: ['bash', '-c', 'airflow run s3_file_sensor3 s3_file_test 2019-04-28T00:00:00+00:00 --job_id 97 --raw -sd DAGS_FOLDER/AWS_Challenge.py --cfg_path /tmp/tmpwxf8bt1r']
+[2019-04-29 07:29:23,912] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test [2019-04-29 07:29:23,912] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-04-29 07:29:24,063] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test [2019-04-29 07:29:24,062] {models.py:273} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 07:29:24,116] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test [2019-04-29 07:29:24,115] {cli.py:520} INFO - Running <TaskInstance: s3_file_sensor3.s3_file_test 2019-04-28T00:00:00+00:00 [running]> on host localhost.localdomain
+[2019-04-29 07:29:24,157] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:24,173] {logging_mixin.py:95} INFO - [2019-04-29 07:29:24,172] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:24,470] {logging_mixin.py:95} INFO - [2019-04-29 07:29:24,469] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:24,472] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:24,508] {logging_mixin.py:95} INFO - [2019-04-29 07:29:24,508] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:24,879] {logging_mixin.py:95} INFO - [2019-04-29 07:29:24,878] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:24,881] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:24,919] {logging_mixin.py:95} INFO - [2019-04-29 07:29:24,919] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:25,212] {logging_mixin.py:95} INFO - [2019-04-29 07:29:25,212] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:25,215] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:25,250] {logging_mixin.py:95} INFO - [2019-04-29 07:29:25,250] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:25,540] {logging_mixin.py:95} INFO - [2019-04-29 07:29:25,539] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:25,542] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:25,579] {logging_mixin.py:95} INFO - [2019-04-29 07:29:25,579] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:25,922] {logging_mixin.py:95} INFO - [2019-04-29 07:29:25,922] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:25,924] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:25,962] {logging_mixin.py:95} INFO - [2019-04-29 07:29:25,961] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:26,320] {logging_mixin.py:95} INFO - [2019-04-29 07:29:26,320] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:26,322] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:26,348] {logging_mixin.py:95} INFO - [2019-04-29 07:29:26,348] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:26,641] {logging_mixin.py:95} INFO - [2019-04-29 07:29:26,641] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:26,643] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:26,679] {logging_mixin.py:95} INFO - [2019-04-29 07:29:26,679] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:27,008] {logging_mixin.py:95} INFO - [2019-04-29 07:29:27,008] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:27,011] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:27,042] {logging_mixin.py:95} INFO - [2019-04-29 07:29:27,042] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:27,340] {logging_mixin.py:95} INFO - [2019-04-29 07:29:27,340] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:27,343] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:27,381] {logging_mixin.py:95} INFO - [2019-04-29 07:29:27,381] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:27,953] {logging_mixin.py:95} INFO - [2019-04-29 07:29:27,953] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:27,954] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:27,966] {logging_mixin.py:95} INFO - [2019-04-29 07:29:27,966] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:28,357] {logging_mixin.py:95} INFO - [2019-04-29 07:29:28,357] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:28,358] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:28,377] {logging_mixin.py:95} INFO - [2019-04-29 07:29:28,377] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:28,729] {logging_mixin.py:95} INFO - [2019-04-29 07:29:28,729] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:28,732] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:28,762] {logging_mixin.py:95} INFO - [2019-04-29 07:29:28,762] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:29,067] {logging_mixin.py:95} INFO - [2019-04-29 07:29:29,067] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:29,070] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:29,087] {logging_mixin.py:95} INFO - [2019-04-29 07:29:29,086] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:29,405] {logging_mixin.py:95} INFO - [2019-04-29 07:29:29,405] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:29,408] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:29,443] {logging_mixin.py:95} INFO - [2019-04-29 07:29:29,443] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:29,731] {logging_mixin.py:95} INFO - [2019-04-29 07:29:29,731] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:29,731] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:29,743] {logging_mixin.py:95} INFO - [2019-04-29 07:29:29,743] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:30,304] {logging_mixin.py:95} INFO - [2019-04-29 07:29:30,303] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:30,304] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:30,316] {logging_mixin.py:95} INFO - [2019-04-29 07:29:30,316] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:30,613] {logging_mixin.py:95} INFO - [2019-04-29 07:29:30,613] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:30,615] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:30,629] {logging_mixin.py:95} INFO - [2019-04-29 07:29:30,629] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:30,921] {logging_mixin.py:95} INFO - [2019-04-29 07:29:30,921] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:30,922] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:30,934] {logging_mixin.py:95} INFO - [2019-04-29 07:29:30,934] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:31,357] {logging_mixin.py:95} INFO - [2019-04-29 07:29:31,357] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:31,360] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:31,399] {logging_mixin.py:95} INFO - [2019-04-29 07:29:31,399] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:31,714] {logging_mixin.py:95} INFO - [2019-04-29 07:29:31,714] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:31,716] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:31,754] {logging_mixin.py:95} INFO - [2019-04-29 07:29:31,754] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:32,153] {logging_mixin.py:95} INFO - [2019-04-29 07:29:32,153] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:32,154] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:32,166] {logging_mixin.py:95} INFO - [2019-04-29 07:29:32,166] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:32,470] {logging_mixin.py:95} INFO - [2019-04-29 07:29:32,470] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:32,471] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:32,481] {logging_mixin.py:95} INFO - [2019-04-29 07:29:32,481] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:32,827] {logging_mixin.py:95} INFO - [2019-04-29 07:29:32,827] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:32,828] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:32,841] {logging_mixin.py:95} INFO - [2019-04-29 07:29:32,841] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:33,197] {logging_mixin.py:95} INFO - [2019-04-29 07:29:33,197] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:33,197] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:33,208] {logging_mixin.py:95} INFO - [2019-04-29 07:29:33,208] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:33,601] {logging_mixin.py:95} INFO - [2019-04-29 07:29:33,601] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:33,604] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:33,639] {logging_mixin.py:95} INFO - [2019-04-29 07:29:33,639] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:33,925] {logging_mixin.py:95} INFO - [2019-04-29 07:29:33,925] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:33,928] {s3_key_sensor.py:88} INFO - Poking for key : s3://dev.canopydata.com/airflow/example_qubole_operator.py
+[2019-04-29 07:29:33,965] {logging_mixin.py:95} INFO - [2019-04-29 07:29:33,965] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:29:34,319] {logging_mixin.py:95} INFO - [2019-04-29 07:29:34,319] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:29:34,331] {models.py:1788} ERROR - Snap. Time is OUT.
+Traceback (most recent call last):
+  File "/home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/models.py", line 1657, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/sensors/base_sensor_operator.py", line 106, in execute
+    raise AirflowSensorTimeout('Snap. Time is OUT.')
+airflow.exceptions.AirflowSensorTimeout: Snap. Time is OUT.
+[2019-04-29 07:29:34,335] {models.py:1817} INFO - All retries failed; marking task as FAILED
+[2019-04-29 07:29:34,357] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test /home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/utils/helpers.py:356: DeprecationWarning: Importing 'BashOperator' directly from 'airflow.operators' has been deprecated. Please import from 'airflow.operators.[operator_module]' instead. Support for direct imports will be dropped entirely in Airflow 2.0.
+[2019-04-29 07:29:34,357] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test   DeprecationWarning)
+[2019-04-29 07:29:34,358] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test Traceback (most recent call last):
+[2019-04-29 07:29:34,358] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test   File "/home/mjcarleb/anaconda3/envs/airflow/bin/airflow", line 32, in <module>
+[2019-04-29 07:29:34,359] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test     args.func(args)
+[2019-04-29 07:29:34,359] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test   File "/home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/utils/cli.py", line 74, in wrapper
+[2019-04-29 07:29:34,359] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test     return f(*args, **kwargs)
+[2019-04-29 07:29:34,359] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test   File "/home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/bin/cli.py", line 526, in run
+[2019-04-29 07:29:34,359] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test     _run(args, dag, ti)
+[2019-04-29 07:29:34,359] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test   File "/home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/bin/cli.py", line 445, in _run
+[2019-04-29 07:29:34,359] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test     pool=args.pool,
+[2019-04-29 07:29:34,359] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test   File "/home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/utils/db.py", line 73, in wrapper
+[2019-04-29 07:29:34,359] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test     return func(*args, **kwargs)
+[2019-04-29 07:29:34,359] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test   File "/home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/models.py", line 1657, in _run_raw_task
+[2019-04-29 07:29:34,359] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test     result = task_copy.execute(context=context)
+[2019-04-29 07:29:34,359] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test   File "/home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/sensors/base_sensor_operator.py", line 106, in execute
+[2019-04-29 07:29:34,359] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test     raise AirflowSensorTimeout('Snap. Time is OUT.')
+[2019-04-29 07:29:34,359] {base_task_runner.py:101} INFO - Job 97: Subtask s3_file_test airflow.exceptions.AirflowSensorTimeout: Snap. Time is OUT.
+[2019-04-29 07:29:38,471] {logging_mixin.py:95} INFO - [2019-04-29 07:29:38,470] {jobs.py:2527} INFO - Task exited with return code 1

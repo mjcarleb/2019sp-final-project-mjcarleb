@@ -1,0 +1,23 @@
+[2019-05-01 18:53:41,832] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Content_Addressable_DAG.7.Generate_Transform.hash 2019-05-01T22:53:01.776740+00:00 [queued]>
+[2019-05-01 18:53:41,836] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Content_Addressable_DAG.7.Generate_Transform.hash 2019-05-01T22:53:01.776740+00:00 [queued]>
+[2019-05-01 18:53:41,836] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2019-05-01 18:53:41,836] {__init__.py:1354} INFO - Starting attempt 1 of 1
+[2019-05-01 18:53:41,836] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2019-05-01 18:53:41,845] {__init__.py:1374} INFO - Executing <Task(PythonOperator): 7.Generate_Transform.hash> on 2019-05-01T22:53:01.776740+00:00
+[2019-05-01 18:53:41,846] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'Content_Addressable_DAG', '7.Generate_Transform.hash', '2019-05-01T22:53:01.776740+00:00', '--job_id', '418', '--raw', '-sd', 'DAGS_FOLDER/content_addressable_dag.py', '--cfg_path', '/tmp/tmpnf8s0yzb']
+[2019-05-01 18:53:42,107] {base_task_runner.py:101} INFO - Job 418: Subtask 7.Generate_Transform.hash /home/mjcarleb/anaconda3/envs/airflow5/lib/python3.7/site-packages/airflow/configuration.py:214: FutureWarning: The task_runner setting in [core] has the old default value of 'BashTaskRunner'. This value has been changed to 'StandardTaskRunner' in the running config, but please update your config before Apache Airflow 2.0.
+[2019-05-01 18:53:42,107] {base_task_runner.py:101} INFO - Job 418: Subtask 7.Generate_Transform.hash   FutureWarning,
+[2019-05-01 18:53:42,256] {base_task_runner.py:101} INFO - Job 418: Subtask 7.Generate_Transform.hash [2019-05-01 18:53:42,256] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-05-01 18:53:42,396] {base_task_runner.py:101} INFO - Job 418: Subtask 7.Generate_Transform.hash [2019-05-01 18:53:42,396] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/content_addressable_dag.py
+[2019-05-01 18:53:42,535] {base_task_runner.py:101} INFO - Job 418: Subtask 7.Generate_Transform.hash [2019-05-01 18:53:42,534] {cli.py:517} INFO - Running <TaskInstance: Content_Addressable_DAG.7.Generate_Transform.hash 2019-05-01T22:53:01.776740+00:00 [running]> on host localhost.localdomain
+[2019-05-01 18:53:42,540] {python_operator.py:104} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=Content_Addressable_DAG
+AIRFLOW_CTX_TASK_ID=7.Generate_Transform.hash
+AIRFLOW_CTX_EXECUTION_DATE=2019-05-01T22:53:01.776740+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2019-05-01T22:53:01.776740+00:00
+[2019-05-01 18:53:42,660] {logging_mixin.py:95} WARNING - /home/mjcarleb/anaconda3/envs/airflow5/lib/python3.7/site-packages/pyarrow/pandas_compat.py:114: FutureWarning: A future version of pandas will default to `skipna=True`. To silence this warning, pass `skipna=True|False` explicitly.
+  result = infer_dtype(pandas_collection)
+[2019-05-01 18:53:42,696] {python_operator.py:113} INFO - Done. Returned value was: Transformed copied data with hash = 36a9c987
+[2019-05-01 18:53:46,827] {logging_mixin.py:95} INFO - [2019-05-01 18:53:46,826] {jobs.py:2562} INFO - Task exited with return code 0

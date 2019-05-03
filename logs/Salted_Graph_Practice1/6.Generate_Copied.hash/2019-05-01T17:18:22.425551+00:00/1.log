@@ -1,0 +1,57 @@
+[2019-05-01 13:19:39,817] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.6.Generate_Copied.hash 2019-05-01T17:18:22.425551+00:00 [queued]>
+[2019-05-01 13:19:39,822] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.6.Generate_Copied.hash 2019-05-01T17:18:22.425551+00:00 [queued]>
+[2019-05-01 13:19:39,822] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2019-05-01 13:19:39,822] {__init__.py:1354} INFO - Starting attempt 1 of 1
+[2019-05-01 13:19:39,822] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2019-05-01 13:19:39,830] {__init__.py:1374} INFO - Executing <Task(BashOperator): 6.Generate_Copied.hash> on 2019-05-01T17:18:22.425551+00:00
+[2019-05-01 13:19:39,830] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'Salted_Graph_Practice1', '6.Generate_Copied.hash', '2019-05-01T17:18:22.425551+00:00', '--job_id', '304', '--raw', '-sd', 'DAGS_FOLDER/salted_graph.py', '--cfg_path', '/tmp/tmpcqg9bfab']
+[2019-05-01 13:19:40,093] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash /home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/configuration.py:214: FutureWarning: The task_runner setting in [core] has the old default value of 'BashTaskRunner'. This value has been changed to 'StandardTaskRunner' in the running config, but please update your config before Apache Airflow 2.0.
+[2019-05-01 13:19:40,093] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash   FutureWarning,
+[2019-05-01 13:19:40,241] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash [2019-05-01 13:19:40,241] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-05-01 13:19:40,379] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash [2019-05-01 13:19:40,379] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/salted_graph.py
+[2019-05-01 13:19:40,400] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash [2019-05-01 13:19:40,400] {cli.py:517} INFO - Running <TaskInstance: Salted_Graph_Practice1.6.Generate_Copied.hash 2019-05-01T17:18:22.425551+00:00 [running]> on host localhost.localdomain
+[2019-05-01 13:19:40,406] {bash_operator.py:81} INFO - Tmp dir root location: 
+ /tmp
+[2019-05-01 13:19:40,406] {bash_operator.py:90} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=Salted_Graph_Practice1
+AIRFLOW_CTX_TASK_ID=6.Generate_Copied.hash
+AIRFLOW_CTX_EXECUTION_DATE=2019-05-01T17:18:22.425551+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2019-05-01T17:18:22.425551+00:00
+[2019-05-01 13:19:40,407] {bash_operator.py:104} INFO - Temporary script location: /tmp/airflowtmpxzdy4aff/6.Generate_Copied.hashk4jnp3n_
+[2019-05-01 13:19:40,407] {bash_operator.py:114} INFO - Running command: aws s3 cp s3://cscie29-data/pset5/yelp_data/yelp_subset_1.csv
+[2019-05-01 13:19:40,410] {bash_operator.py:123} INFO - Output:
+[2019-05-01 13:19:40,617] {bash_operator.py:127} INFO - usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+[2019-05-01 13:19:40,617] {bash_operator.py:127} INFO - To see help text, you can run:
+[2019-05-01 13:19:40,617] {bash_operator.py:127} INFO - 
+[2019-05-01 13:19:40,617] {bash_operator.py:127} INFO -   aws help
+[2019-05-01 13:19:40,617] {bash_operator.py:127} INFO -   aws <command> help
+[2019-05-01 13:19:40,617] {bash_operator.py:127} INFO -   aws <command> <subcommand> help
+[2019-05-01 13:19:40,617] {bash_operator.py:127} INFO - aws: error: too few arguments
+[2019-05-01 13:19:40,638] {bash_operator.py:131} INFO - Command exited with return code 2
+[2019-05-01 13:19:40,642] {__init__.py:1580} ERROR - Bash command failed
+Traceback (most recent call last):
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 1441, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/operators/bash_operator.py", line 135, in execute
+    raise AirflowException("Bash command failed")
+airflow.exceptions.AirflowException: Bash command failed
+[2019-05-01 13:19:40,643] {__init__.py:1611} INFO - Marking task as FAILED.
+[2019-05-01 13:19:40,659] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash Traceback (most recent call last):
+[2019-05-01 13:19:40,659] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/bin/airflow", line 32, in <module>
+[2019-05-01 13:19:40,659] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash     args.func(args)
+[2019-05-01 13:19:40,659] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/utils/cli.py", line 74, in wrapper
+[2019-05-01 13:19:40,659] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash     return f(*args, **kwargs)
+[2019-05-01 13:19:40,659] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/bin/cli.py", line 523, in run
+[2019-05-01 13:19:40,659] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash     _run(args, dag, ti)
+[2019-05-01 13:19:40,659] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/bin/cli.py", line 442, in _run
+[2019-05-01 13:19:40,659] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash     pool=args.pool,
+[2019-05-01 13:19:40,659] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/utils/db.py", line 73, in wrapper
+[2019-05-01 13:19:40,659] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash     return func(*args, **kwargs)
+[2019-05-01 13:19:40,659] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 1441, in _run_raw_task
+[2019-05-01 13:19:40,659] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash     result = task_copy.execute(context=context)
+[2019-05-01 13:19:40,659] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/operators/bash_operator.py", line 135, in execute
+[2019-05-01 13:19:40,659] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash     raise AirflowException("Bash command failed")
+[2019-05-01 13:19:40,659] {base_task_runner.py:101} INFO - Job 304: Subtask 6.Generate_Copied.hash airflow.exceptions.AirflowException: Bash command failed
+[2019-05-01 13:19:44,826] {logging_mixin.py:95} INFO - [2019-05-01 13:19:44,826] {jobs.py:2562} INFO - Task exited with return code 1

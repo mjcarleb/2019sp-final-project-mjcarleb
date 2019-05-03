@@ -1,0 +1,26 @@
+[2019-04-29 12:52:09,312] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: pass_arg_to_python_op.touch_as_proof 2019-04-28T00:00:00+00:00 [queued]>
+[2019-04-29 12:52:09,316] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: pass_arg_to_python_op.touch_as_proof 2019-04-28T00:00:00+00:00 [queued]>
+[2019-04-29 12:52:09,316] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2019-04-29 12:52:09,316] {__init__.py:1354} INFO - Starting attempt 1 of 1
+[2019-04-29 12:52:09,316] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2019-04-29 12:52:09,325] {__init__.py:1374} INFO - Executing <Task(BashOperator): touch_as_proof> on 2019-04-28T00:00:00+00:00
+[2019-04-29 12:52:09,325] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'pass_arg_to_python_op', 'touch_as_proof', '2019-04-28T00:00:00+00:00', '--job_id', '152', '--raw', '-sd', 'DAGS_FOLDER/arg_passing.py', '--cfg_path', '/tmp/tmp4vvj22x2']
+[2019-04-29 12:52:09,579] {base_task_runner.py:101} INFO - Job 152: Subtask touch_as_proof /home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/configuration.py:214: FutureWarning: The task_runner setting in [core] has the old default value of 'BashTaskRunner'. This value has been changed to 'StandardTaskRunner' in the running config, but please update your config before Apache Airflow 2.0.
+[2019-04-29 12:52:09,579] {base_task_runner.py:101} INFO - Job 152: Subtask touch_as_proof   FutureWarning,
+[2019-04-29 12:52:09,743] {base_task_runner.py:101} INFO - Job 152: Subtask touch_as_proof [2019-04-29 12:52:09,742] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-04-29 12:52:09,887] {base_task_runner.py:101} INFO - Job 152: Subtask touch_as_proof [2019-04-29 12:52:09,887] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/arg_passing.py
+[2019-04-29 12:52:10,027] {base_task_runner.py:101} INFO - Job 152: Subtask touch_as_proof [2019-04-29 12:52:10,027] {cli.py:517} INFO - Running <TaskInstance: pass_arg_to_python_op.touch_as_proof 2019-04-28T00:00:00+00:00 [running]> on host localhost.localdomain
+[2019-04-29 12:52:10,033] {bash_operator.py:81} INFO - Tmp dir root location: 
+ /tmp
+[2019-04-29 12:52:10,033] {bash_operator.py:90} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=pass_arg_to_python_op
+AIRFLOW_CTX_TASK_ID=touch_as_proof
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-28T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-28T00:00:00+00:00
+[2019-04-29 12:52:10,034] {bash_operator.py:104} INFO - Temporary script location: /tmp/airflowtmp6lywp_qb/touch_as_proofe9whdrc1
+[2019-04-29 12:52:10,034] {bash_operator.py:114} INFO - Running command: touch ~/iwashere.txt
+[2019-04-29 12:52:10,037] {bash_operator.py:123} INFO - Output:
+[2019-04-29 12:52:10,039] {bash_operator.py:131} INFO - Command exited with return code 0
+[2019-04-29 12:52:14,321] {logging_mixin.py:95} INFO - [2019-04-29 12:52:14,321] {jobs.py:2562} INFO - Task exited with return code 0

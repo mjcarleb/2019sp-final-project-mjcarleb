@@ -1,0 +1,17 @@
+[2019-05-02 20:31:15,626] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Content_Addressable_DAG.2.Sense_Report.hash 2019-05-03T00:31:07.466698+00:00 [queued]>
+[2019-05-02 20:31:15,630] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Content_Addressable_DAG.2.Sense_Report.hash 2019-05-03T00:31:07.466698+00:00 [queued]>
+[2019-05-02 20:31:15,630] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2019-05-02 20:31:15,630] {__init__.py:1354} INFO - Starting attempt 1 of 1
+[2019-05-02 20:31:15,631] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2019-05-02 20:31:15,639] {__init__.py:1374} INFO - Executing <Task(FileSensor): 2.Sense_Report.hash> on 2019-05-03T00:31:07.466698+00:00
+[2019-05-02 20:31:15,639] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'Content_Addressable_DAG', '2.Sense_Report.hash', '2019-05-03T00:31:07.466698+00:00', '--job_id', '434', '--raw', '-sd', 'DAGS_FOLDER/content_addressable_dag.py', '--cfg_path', '/tmp/tmpvwuz0enm']
+[2019-05-02 20:31:15,918] {base_task_runner.py:101} INFO - Job 434: Subtask 2.Sense_Report.hash /home/mjcarleb/anaconda3/envs/airflow5/lib/python3.7/site-packages/airflow/configuration.py:214: FutureWarning: The task_runner setting in [core] has the old default value of 'BashTaskRunner'. This value has been changed to 'StandardTaskRunner' in the running config, but please update your config before Apache Airflow 2.0.
+[2019-05-02 20:31:15,918] {base_task_runner.py:101} INFO - Job 434: Subtask 2.Sense_Report.hash   FutureWarning,
+[2019-05-02 20:31:16,069] {base_task_runner.py:101} INFO - Job 434: Subtask 2.Sense_Report.hash [2019-05-02 20:31:16,069] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-05-02 20:31:16,213] {base_task_runner.py:101} INFO - Job 434: Subtask 2.Sense_Report.hash [2019-05-02 20:31:16,212] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/content_addressable_dag.py
+[2019-05-02 20:31:16,356] {base_task_runner.py:101} INFO - Job 434: Subtask 2.Sense_Report.hash [2019-05-02 20:31:16,356] {cli.py:517} INFO - Running <TaskInstance: Content_Addressable_DAG.2.Sense_Report.hash 2019-05-03T00:31:07.466698+00:00 [running]> on host localhost.localdomain
+[2019-05-02 20:31:16,365] {file_sensor.py:60} INFO - Poking for file /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/reports/yelp_subset_1.f1330a4e.txt
+[2019-05-02 20:31:16,365] {base_sensor_operator.py:124} INFO - Success criteria met. Exiting.
+[2019-05-02 20:31:20,641] {logging_mixin.py:95} INFO - [2019-05-02 20:31:20,640] {jobs.py:2562} INFO - Task exited with return code 0

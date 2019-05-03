@@ -1,0 +1,69 @@
+[2019-04-30 23:10:36,045] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: bash_xcom_pull_POC.pull_from_bash 2019-05-01T03:10:21.274330+00:00 [queued]>
+[2019-04-30 23:10:36,049] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: bash_xcom_pull_POC.pull_from_bash 2019-05-01T03:10:21.274330+00:00 [queued]>
+[2019-04-30 23:10:36,049] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2019-04-30 23:10:36,049] {__init__.py:1354} INFO - Starting attempt 1 of 1
+[2019-04-30 23:10:36,049] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2019-04-30 23:10:36,067] {__init__.py:1374} INFO - Executing <Task(BashOperator): pull_from_bash> on 2019-05-01T03:10:21.274330+00:00
+[2019-04-30 23:10:36,067] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'bash_xcom_pull_POC', 'pull_from_bash', '2019-05-01T03:10:21.274330+00:00', '--job_id', '253', '--raw', '-sd', 'DAGS_FOLDER/get_xcom_values.py', '--cfg_path', '/tmp/tmp62vl350b']
+[2019-04-30 23:10:36,362] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash /home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/configuration.py:214: FutureWarning: The task_runner setting in [core] has the old default value of 'BashTaskRunner'. This value has been changed to 'StandardTaskRunner' in the running config, but please update your config before Apache Airflow 2.0.
+[2019-04-30 23:10:36,362] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash   FutureWarning,
+[2019-04-30 23:10:36,511] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash [2019-04-30 23:10:36,511] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-04-30 23:10:36,663] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash [2019-04-30 23:10:36,663] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/get_xcom_values.py
+[2019-04-30 23:10:36,685] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash [2019-04-30 23:10:36,684] {cli.py:517} INFO - Running <TaskInstance: bash_xcom_pull_POC.pull_from_bash 2019-05-01T03:10:21.274330+00:00 [running]> on host localhost.localdomain
+[2019-04-30 23:10:36,692] {__init__.py:1580} ERROR - 'context' is undefined
+Traceback (most recent call last):
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 1426, in _run_raw_task
+    self.render_templates()
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 1790, in render_templates
+    rendered_content = rt(attr, content, jinja_context)
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 2538, in render_template
+    return self.render_template_from_field(attr, content, context, jinja_env)
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 2514, in render_template_from_field
+    result = jinja_env.from_string(content).render(**context)
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "<template>", line 1, in top-level template code
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/jinja2/environment.py", line 411, in getitem
+    return obj[argument]
+jinja2.exceptions.UndefinedError: 'context' is undefined
+[2019-04-30 23:10:36,693] {__init__.py:1611} INFO - Marking task as FAILED.
+[2019-04-30 23:10:36,705] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash Traceback (most recent call last):
+[2019-04-30 23:10:36,705] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash   File "/home/mjcarleb/anaconda3/envs/airflow4/bin/airflow", line 32, in <module>
+[2019-04-30 23:10:36,705] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash     args.func(args)
+[2019-04-30 23:10:36,705] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/utils/cli.py", line 74, in wrapper
+[2019-04-30 23:10:36,705] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash     return f(*args, **kwargs)
+[2019-04-30 23:10:36,705] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/bin/cli.py", line 523, in run
+[2019-04-30 23:10:36,705] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash     _run(args, dag, ti)
+[2019-04-30 23:10:36,705] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/bin/cli.py", line 442, in _run
+[2019-04-30 23:10:36,705] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash     pool=args.pool,
+[2019-04-30 23:10:36,705] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/utils/db.py", line 73, in wrapper
+[2019-04-30 23:10:36,705] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash     return func(*args, **kwargs)
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 1426, in _run_raw_task
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash     self.render_templates()
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 1790, in render_templates
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash     rendered_content = rt(attr, content, jinja_context)
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 2538, in render_template
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash     return self.render_template_from_field(attr, content, context, jinja_env)
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 2514, in render_template_from_field
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash     result = jinja_env.from_string(content).render(**context)
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash     return original_render(self, *args, **kwargs)
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash     return self.environment.handle_exception(exc_info, True)
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash     reraise(exc_type, exc_value, tb)
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash     raise value.with_traceback(tb)
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash   File "<template>", line 1, in top-level template code
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/jinja2/environment.py", line 411, in getitem
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash     return obj[argument]
+[2019-04-30 23:10:36,706] {base_task_runner.py:101} INFO - Job 253: Subtask pull_from_bash jinja2.exceptions.UndefinedError: 'context' is undefined
+[2019-04-30 23:10:41,063] {logging_mixin.py:95} INFO - [2019-04-30 23:10:41,063] {jobs.py:2562} INFO - Task exited with return code 1

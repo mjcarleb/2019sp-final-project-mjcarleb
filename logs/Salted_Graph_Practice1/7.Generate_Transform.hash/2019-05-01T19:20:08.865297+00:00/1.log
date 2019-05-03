@@ -1,0 +1,67 @@
+[2019-05-01 15:21:33,594] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.7.Generate_Transform.hash 2019-05-01T19:20:08.865297+00:00 [queued]>
+[2019-05-01 15:21:33,599] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: Salted_Graph_Practice1.7.Generate_Transform.hash 2019-05-01T19:20:08.865297+00:00 [queued]>
+[2019-05-01 15:21:33,599] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2019-05-01 15:21:33,599] {__init__.py:1354} INFO - Starting attempt 1 of 1
+[2019-05-01 15:21:33,599] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2019-05-01 15:21:33,608] {__init__.py:1374} INFO - Executing <Task(PythonOperator): 7.Generate_Transform.hash> on 2019-05-01T19:20:08.865297+00:00
+[2019-05-01 15:21:33,608] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'Salted_Graph_Practice1', '7.Generate_Transform.hash', '2019-05-01T19:20:08.865297+00:00', '--job_id', '356', '--raw', '-sd', 'DAGS_FOLDER/salted_graph.py', '--cfg_path', '/tmp/tmpuidk9wjc']
+[2019-05-01 15:21:33,893] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash /home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/configuration.py:214: FutureWarning: The task_runner setting in [core] has the old default value of 'BashTaskRunner'. This value has been changed to 'StandardTaskRunner' in the running config, but please update your config before Apache Airflow 2.0.
+[2019-05-01 15:21:33,893] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash   FutureWarning,
+[2019-05-01 15:21:34,041] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash [2019-05-01 15:21:34,041] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-05-01 15:21:34,180] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash [2019-05-01 15:21:34,180] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/salted_graph.py
+[2019-05-01 15:21:34,324] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash [2019-05-01 15:21:34,324] {cli.py:517} INFO - Running <TaskInstance: Salted_Graph_Practice1.7.Generate_Transform.hash 2019-05-01T19:20:08.865297+00:00 [running]> on host localhost.localdomain
+[2019-05-01 15:21:34,330] {python_operator.py:104} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=Salted_Graph_Practice1
+AIRFLOW_CTX_TASK_ID=7.Generate_Transform.hash
+AIRFLOW_CTX_EXECUTION_DATE=2019-05-01T19:20:08.865297+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2019-05-01T19:20:08.865297+00:00
+[2019-05-01 15:21:34,404] {__init__.py:1580} ERROR - Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+pyarrow or fastparquet is required for parquet support
+Traceback (most recent call last):
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 1441, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/operators/python_operator.py", line 112, in execute
+    return_value = self.execute_callable()
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/operators/python_operator.py", line 117, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/salted_graph.py", line 254, in transform_data
+    df.to_parquet(transformed_file_path)
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/pandas/core/frame.py", line 2203, in to_parquet
+    partition_cols=partition_cols, **kwargs)
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/pandas/io/parquet.py", line 250, in to_parquet
+    impl = get_engine(engine)
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/pandas/io/parquet.py", line 32, in get_engine
+    raise ImportError("Unable to find a usable engine; "
+ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+pyarrow or fastparquet is required for parquet support
+[2019-05-01 15:21:34,406] {__init__.py:1611} INFO - Marking task as FAILED.
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash Traceback (most recent call last):
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/bin/airflow", line 32, in <module>
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash     args.func(args)
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/utils/cli.py", line 74, in wrapper
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash     return f(*args, **kwargs)
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/bin/cli.py", line 523, in run
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash     _run(args, dag, ti)
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/bin/cli.py", line 442, in _run
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash     pool=args.pool,
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/utils/db.py", line 73, in wrapper
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash     return func(*args, **kwargs)
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 1441, in _run_raw_task
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash     result = task_copy.execute(context=context)
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/operators/python_operator.py", line 112, in execute
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash     return_value = self.execute_callable()
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/operators/python_operator.py", line 117, in execute_callable
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash     return self.python_callable(*self.op_args, **self.op_kwargs)
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash   File "/home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/salted_graph.py", line 254, in transform_data
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash     df.to_parquet(transformed_file_path)
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/pandas/core/frame.py", line 2203, in to_parquet
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash     partition_cols=partition_cols, **kwargs)
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/pandas/io/parquet.py", line 250, in to_parquet
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash     impl = get_engine(engine)
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/pandas/io/parquet.py", line 32, in get_engine
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash     raise ImportError("Unable to find a usable engine; "
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+[2019-05-01 15:21:34,420] {base_task_runner.py:101} INFO - Job 356: Subtask 7.Generate_Transform.hash pyarrow or fastparquet is required for parquet support
+[2019-05-01 15:21:38,631] {logging_mixin.py:95} INFO - [2019-05-01 15:21:38,631] {jobs.py:2562} INFO - Task exited with return code 1

@@ -1,0 +1,123 @@
+[2019-04-29 07:43:59,281] {models.py:1359} INFO - Dependencies all met for <TaskInstance: s3_badcred_sensor.s3_file_test 2019-04-28T00:00:00+00:00 [queued]>
+[2019-04-29 07:43:59,282] {models.py:1359} INFO - Dependencies all met for <TaskInstance: s3_badcred_sensor.s3_file_test 2019-04-28T00:00:00+00:00 [queued]>
+[2019-04-29 07:43:59,282] {models.py:1571} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 2
+--------------------------------------------------------------------------------
+
+[2019-04-29 07:43:59,293] {models.py:1593} INFO - Executing <Task(S3KeySensor): s3_file_test> on 2019-04-28T00:00:00+00:00
+[2019-04-29 07:43:59,293] {base_task_runner.py:118} INFO - Running: ['bash', '-c', 'airflow run s3_badcred_sensor s3_file_test 2019-04-28T00:00:00+00:00 --job_id 100 --raw -sd DAGS_FOLDER/AWS_Challenge.py --cfg_path /tmp/tmpas890jiw']
+[2019-04-29 07:43:59,735] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test [2019-04-29 07:43:59,734] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-04-29 07:43:59,880] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test [2019-04-29 07:43:59,880] {models.py:273} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/AWS_Challenge.py
+[2019-04-29 07:43:59,915] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test [2019-04-29 07:43:59,915] {cli.py:520} INFO - Running <TaskInstance: s3_badcred_sensor.s3_file_test 2019-04-28T00:00:00+00:00 [running]> on host localhost.localdomain
+[2019-04-29 07:43:59,957] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:43:59,973] {logging_mixin.py:95} INFO - [2019-04-29 07:43:59,972] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:00,269] {logging_mixin.py:95} INFO - [2019-04-29 07:44:00,269] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:00,271] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:00,311] {logging_mixin.py:95} INFO - [2019-04-29 07:44:00,311] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:00,606] {logging_mixin.py:95} INFO - [2019-04-29 07:44:00,606] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:00,608] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:00,646] {logging_mixin.py:95} INFO - [2019-04-29 07:44:00,646] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:00,952] {logging_mixin.py:95} INFO - [2019-04-29 07:44:00,952] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:00,955] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:00,992] {logging_mixin.py:95} INFO - [2019-04-29 07:44:00,992] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:01,293] {logging_mixin.py:95} INFO - [2019-04-29 07:44:01,292] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:01,293] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:01,304] {logging_mixin.py:95} INFO - [2019-04-29 07:44:01,304] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:01,643] {logging_mixin.py:95} INFO - [2019-04-29 07:44:01,643] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:01,644] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:01,655] {logging_mixin.py:95} INFO - [2019-04-29 07:44:01,655] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:01,938] {logging_mixin.py:95} INFO - [2019-04-29 07:44:01,938] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:01,940] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:01,978] {logging_mixin.py:95} INFO - [2019-04-29 07:44:01,978] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:02,485] {logging_mixin.py:95} INFO - [2019-04-29 07:44:02,485] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:02,487] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:02,525] {logging_mixin.py:95} INFO - [2019-04-29 07:44:02,525] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:02,797] {logging_mixin.py:95} INFO - [2019-04-29 07:44:02,797] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:02,800] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:02,837] {logging_mixin.py:95} INFO - [2019-04-29 07:44:02,837] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:03,153] {logging_mixin.py:95} INFO - [2019-04-29 07:44:03,152] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:03,155] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:03,193] {logging_mixin.py:95} INFO - [2019-04-29 07:44:03,193] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:03,506] {logging_mixin.py:95} INFO - [2019-04-29 07:44:03,506] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:03,508] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:03,546] {logging_mixin.py:95} INFO - [2019-04-29 07:44:03,546] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:03,844] {logging_mixin.py:95} INFO - [2019-04-29 07:44:03,844] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:03,847] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:03,886] {logging_mixin.py:95} INFO - [2019-04-29 07:44:03,886] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:04,234] {logging_mixin.py:95} INFO - [2019-04-29 07:44:04,234] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:04,238] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:04,272] {logging_mixin.py:95} INFO - [2019-04-29 07:44:04,272] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:04,555] {logging_mixin.py:95} INFO - [2019-04-29 07:44:04,554] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:04,557] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:04,596] {logging_mixin.py:95} INFO - [2019-04-29 07:44:04,596] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:04,874] {logging_mixin.py:95} INFO - [2019-04-29 07:44:04,873] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:04,876] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:04,914] {logging_mixin.py:95} INFO - [2019-04-29 07:44:04,913] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:05,196] {logging_mixin.py:95} INFO - [2019-04-29 07:44:05,196] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:05,199] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:05,235] {logging_mixin.py:95} INFO - [2019-04-29 07:44:05,235] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:05,610] {logging_mixin.py:95} INFO - [2019-04-29 07:44:05,610] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:05,610] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:05,626] {logging_mixin.py:95} INFO - [2019-04-29 07:44:05,626] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:05,925] {logging_mixin.py:95} INFO - [2019-04-29 07:44:05,925] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:05,928] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:05,966] {logging_mixin.py:95} INFO - [2019-04-29 07:44:05,966] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:06,270] {logging_mixin.py:95} INFO - [2019-04-29 07:44:06,269] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:06,272] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:06,309] {logging_mixin.py:95} INFO - [2019-04-29 07:44:06,309] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:06,661] {logging_mixin.py:95} INFO - [2019-04-29 07:44:06,661] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:06,664] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:06,702] {logging_mixin.py:95} INFO - [2019-04-29 07:44:06,702] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:07,003] {logging_mixin.py:95} INFO - [2019-04-29 07:44:07,003] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:07,006] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:07,045] {logging_mixin.py:95} INFO - [2019-04-29 07:44:07,044] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:07,563] {logging_mixin.py:95} INFO - [2019-04-29 07:44:07,563] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:07,564] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:07,575] {logging_mixin.py:95} INFO - [2019-04-29 07:44:07,575] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:07,875] {logging_mixin.py:95} INFO - [2019-04-29 07:44:07,875] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:07,878] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:07,914] {logging_mixin.py:95} INFO - [2019-04-29 07:44:07,914] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:08,202] {logging_mixin.py:95} INFO - [2019-04-29 07:44:08,202] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:08,205] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:08,241] {logging_mixin.py:95} INFO - [2019-04-29 07:44:08,241] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:08,543] {logging_mixin.py:95} INFO - [2019-04-29 07:44:08,543] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:08,545] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:08,582] {logging_mixin.py:95} INFO - [2019-04-29 07:44:08,582] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:09,102] {logging_mixin.py:95} INFO - [2019-04-29 07:44:09,101] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:09,104] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:09,143] {logging_mixin.py:95} INFO - [2019-04-29 07:44:09,143] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:09,444] {logging_mixin.py:95} INFO - [2019-04-29 07:44:09,444] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:09,447] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:09,484] {logging_mixin.py:95} INFO - [2019-04-29 07:44:09,484] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:09,819] {logging_mixin.py:95} INFO - [2019-04-29 07:44:09,819] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:09,821] {s3_key_sensor.py:88} INFO - Poking for key : s3://cscie29-data/pset5/yelp_data/
+[2019-04-29 07:44:09,859] {logging_mixin.py:95} INFO - [2019-04-29 07:44:09,858] {credentials.py:1046} INFO - Found credentials in shared credentials file: ~/.aws/credentials
+[2019-04-29 07:44:10,154] {logging_mixin.py:95} INFO - [2019-04-29 07:44:10,154] {S3_hook.py:201} INFO - Forbidden
+[2019-04-29 07:44:10,166] {models.py:1788} ERROR - Snap. Time is OUT.
+Traceback (most recent call last):
+  File "/home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/models.py", line 1657, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/sensors/base_sensor_operator.py", line 106, in execute
+    raise AirflowSensorTimeout('Snap. Time is OUT.')
+airflow.exceptions.AirflowSensorTimeout: Snap. Time is OUT.
+[2019-04-29 07:44:10,169] {models.py:1811} INFO - Marking task as UP_FOR_RETRY
+[2019-04-29 07:44:10,199] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test /home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/utils/helpers.py:356: DeprecationWarning: Importing 'BashOperator' directly from 'airflow.operators' has been deprecated. Please import from 'airflow.operators.[operator_module]' instead. Support for direct imports will be dropped entirely in Airflow 2.0.
+[2019-04-29 07:44:10,199] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test   DeprecationWarning)
+[2019-04-29 07:44:10,201] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test Traceback (most recent call last):
+[2019-04-29 07:44:10,201] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test   File "/home/mjcarleb/anaconda3/envs/airflow/bin/airflow", line 32, in <module>
+[2019-04-29 07:44:10,201] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test     args.func(args)
+[2019-04-29 07:44:10,201] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test   File "/home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/utils/cli.py", line 74, in wrapper
+[2019-04-29 07:44:10,201] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test     return f(*args, **kwargs)
+[2019-04-29 07:44:10,201] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test   File "/home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/bin/cli.py", line 526, in run
+[2019-04-29 07:44:10,201] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test     _run(args, dag, ti)
+[2019-04-29 07:44:10,201] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test   File "/home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/bin/cli.py", line 445, in _run
+[2019-04-29 07:44:10,201] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test     pool=args.pool,
+[2019-04-29 07:44:10,201] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test   File "/home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/utils/db.py", line 73, in wrapper
+[2019-04-29 07:44:10,201] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test     return func(*args, **kwargs)
+[2019-04-29 07:44:10,202] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test   File "/home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/models.py", line 1657, in _run_raw_task
+[2019-04-29 07:44:10,202] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test     result = task_copy.execute(context=context)
+[2019-04-29 07:44:10,202] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test   File "/home/mjcarleb/anaconda3/envs/airflow/lib/python3.5/site-packages/airflow/sensors/base_sensor_operator.py", line 106, in execute
+[2019-04-29 07:44:10,202] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test     raise AirflowSensorTimeout('Snap. Time is OUT.')
+[2019-04-29 07:44:10,202] {base_task_runner.py:101} INFO - Job 100: Subtask s3_file_test airflow.exceptions.AirflowSensorTimeout: Snap. Time is OUT.
+[2019-04-29 07:44:14,312] {logging_mixin.py:95} INFO - [2019-04-29 07:44:14,311] {jobs.py:2527} INFO - Task exited with return code 1

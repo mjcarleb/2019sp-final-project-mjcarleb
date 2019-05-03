@@ -1,0 +1,52 @@
+[2019-04-29 14:44:24,321] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: demo_XCOM2.t_push17_via_key_value 2019-04-28T00:00:00+00:00 [queued]>
+[2019-04-29 14:44:24,323] {__init__.py:1139} INFO - Dependencies all met for <TaskInstance: demo_XCOM2.t_push17_via_key_value 2019-04-28T00:00:00+00:00 [queued]>
+[2019-04-29 14:44:24,324] {__init__.py:1353} INFO - 
+--------------------------------------------------------------------------------
+[2019-04-29 14:44:24,324] {__init__.py:1354} INFO - Starting attempt 1 of 1
+[2019-04-29 14:44:24,324] {__init__.py:1355} INFO - 
+--------------------------------------------------------------------------------
+[2019-04-29 14:44:24,332] {__init__.py:1374} INFO - Executing <Task(PythonOperator): t_push17_via_key_value> on 2019-04-28T00:00:00+00:00
+[2019-04-29 14:44:24,332] {base_task_runner.py:119} INFO - Running: ['airflow', 'run', 'demo_XCOM2', 't_push17_via_key_value', '2019-04-28T00:00:00+00:00', '--job_id', '173', '--raw', '-sd', 'DAGS_FOLDER/XCOM_challenge.py', '--cfg_path', '/tmp/tmpaquxx8l9']
+[2019-04-29 14:44:24,590] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value /home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/configuration.py:214: FutureWarning: The task_runner setting in [core] has the old default value of 'BashTaskRunner'. This value has been changed to 'StandardTaskRunner' in the running config, but please update your config before Apache Airflow 2.0.
+[2019-04-29 14:44:24,590] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value   FutureWarning,
+[2019-04-29 14:44:24,770] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value [2019-04-29 14:44:24,770] {__init__.py:51} INFO - Using executor SequentialExecutor
+[2019-04-29 14:44:24,927] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value [2019-04-29 14:44:24,927] {__init__.py:305} INFO - Filling up the DagBag from /home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py
+[2019-04-29 14:44:25,067] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value [2019-04-29 14:44:25,067] {cli.py:517} INFO - Running <TaskInstance: demo_XCOM2.t_push17_via_key_value 2019-04-28T00:00:00+00:00 [running]> on host localhost.localdomain
+[2019-04-29 14:44:25,073] {python_operator.py:104} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_ID=demo_XCOM2
+AIRFLOW_CTX_TASK_ID=t_push17_via_key_value
+AIRFLOW_CTX_EXECUTION_DATE=2019-04-28T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2019-04-28T00:00:00+00:00
+[2019-04-29 14:44:25,073] {__init__.py:1580} ERROR - 'ti'
+Traceback (most recent call last):
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 1441, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/operators/python_operator.py", line 112, in execute
+    return_value = self.execute_callable()
+  File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/operators/python_operator.py", line 117, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py", line 20, in push17_via_key_value
+    kwargs["ti"].xcom_push(key="Value from pusher via return", value=17)
+KeyError: 'ti'
+[2019-04-29 14:44:25,074] {__init__.py:1611} INFO - Marking task as FAILED.
+[2019-04-29 14:44:25,087] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value Traceback (most recent call last):
+[2019-04-29 14:44:25,087] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value   File "/home/mjcarleb/anaconda3/envs/airflow4/bin/airflow", line 32, in <module>
+[2019-04-29 14:44:25,087] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value     args.func(args)
+[2019-04-29 14:44:25,087] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/utils/cli.py", line 74, in wrapper
+[2019-04-29 14:44:25,087] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value     return f(*args, **kwargs)
+[2019-04-29 14:44:25,087] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/bin/cli.py", line 523, in run
+[2019-04-29 14:44:25,087] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value     _run(args, dag, ti)
+[2019-04-29 14:44:25,087] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/bin/cli.py", line 442, in _run
+[2019-04-29 14:44:25,087] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value     pool=args.pool,
+[2019-04-29 14:44:25,087] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/utils/db.py", line 73, in wrapper
+[2019-04-29 14:44:25,087] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value     return func(*args, **kwargs)
+[2019-04-29 14:44:25,087] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/models/__init__.py", line 1441, in _run_raw_task
+[2019-04-29 14:44:25,088] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value     result = task_copy.execute(context=context)
+[2019-04-29 14:44:25,088] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/operators/python_operator.py", line 112, in execute
+[2019-04-29 14:44:25,088] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value     return_value = self.execute_callable()
+[2019-04-29 14:44:25,088] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value   File "/home/mjcarleb/anaconda3/envs/airflow4/lib/python3.7/site-packages/airflow/operators/python_operator.py", line 117, in execute_callable
+[2019-04-29 14:44:25,088] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value     return self.python_callable(*self.op_args, **self.op_kwargs)
+[2019-04-29 14:44:25,088] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value   File "/home/mjcarleb/HESWork/CSCI-E29/2019sp-airflow_project-mjcarleb/dags/XCOM_challenge.py", line 20, in push17_via_key_value
+[2019-04-29 14:44:25,088] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value     kwargs["ti"].xcom_push(key="Value from pusher via return", value=17)
+[2019-04-29 14:44:25,088] {base_task_runner.py:101} INFO - Job 173: Subtask t_push17_via_key_value KeyError: 'ti'
+[2019-04-29 14:44:29,340] {logging_mixin.py:95} INFO - [2019-04-29 14:44:29,339] {jobs.py:2562} INFO - Task exited with return code 1
