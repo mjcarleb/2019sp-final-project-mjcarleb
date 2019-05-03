@@ -67,12 +67,35 @@ docs/_build
 # Mypy Cache
 .mypy_cache/
 
-# Stale old files
+# Stale old files or project specific not for others
 *backup*
 *old*
 *tmp*
 copied/
 transformed/
-
-# Airflow related
 *.pid
+unittests*
+ci/
+dag_old/
+docs/
+old_airflow_home/
+.bump*
+.cookie*
+.cover*
+.editor*
+appveyor*
+AUTHORS*
+bash.tmp
+CHANGELOG*
+CONTRIBUTING*
+docker*
+Docker*
+drun*
+first*
+local_file*
+old_yelp*
+Pip*
+tmp.tmp
+tox.ini
+
+
